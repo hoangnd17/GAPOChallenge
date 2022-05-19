@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1652835E86700043D3D /* AppDelegate.swift */; };
+		FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1672835E86700043D3D /* SceneDelegate.swift */; };
+		FA54A16A2835E86700043D3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1692835E86700043D3D /* ViewController.swift */; };
+		FA54A16D2835E86700043D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA54A16B2835E86700043D3D /* Main.storyboard */; };
+		FA54A16F2835E86900043D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA54A16E2835E86900043D3D /* Assets.xcassets */; };
+		FA54A1722835E86900043D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA54A1702835E86900043D3D /* LaunchScreen.storyboard */; };
+		FA54A17D2835E86A00043D3D /* GAPOChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A17C2835E86A00043D3D /* GAPOChallengeTests.swift */; };
+		FA54A1872835E86A00043D3D /* GAPOChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1862835E86A00043D3D /* GAPOChallengeUITests.swift */; };
+		FA54A1892835E86A00043D3D /* GAPOChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1882835E86A00043D3D /* GAPOChallengeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA54A1792835E86A00043D3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA54A15A2835E86700043D3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA54A1612835E86700043D3D;
+			remoteInfo = GAPOChallenge;
+		};
+		FA54A1832835E86A00043D3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA54A15A2835E86700043D3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA54A1612835E86700043D3D;
+			remoteInfo = GAPOChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA54A1622835E86700043D3D /* GAPOChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAPOChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA54A1652835E86700043D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA54A1672835E86700043D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA54A1692835E86700043D3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA54A16C2835E86700043D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA54A16E2835E86900043D3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA54A1712835E86900043D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA54A1732835E86900043D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA54A1782835E86A00043D3D /* GAPOChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAPOChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA54A17C2835E86A00043D3D /* GAPOChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAPOChallengeTests.swift; sourceTree = "<group>"; };
+		FA54A1822835E86A00043D3D /* GAPOChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAPOChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA54A1862835E86A00043D3D /* GAPOChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAPOChallengeUITests.swift; sourceTree = "<group>"; };
+		FA54A1882835E86A00043D3D /* GAPOChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAPOChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA54A15F2835E86700043D3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA54A1752835E86A00043D3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA54A17F2835E86A00043D3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA54A1592835E86700043D3D = {
+			isa = PBXGroup;
+			children = (
+				FA54A1642835E86700043D3D /* GAPOChallenge */,
+				FA54A17B2835E86A00043D3D /* GAPOChallengeTests */,
+				FA54A1852835E86A00043D3D /* GAPOChallengeUITests */,
+				FA54A1632835E86700043D3D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA54A1632835E86700043D3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA54A1622835E86700043D3D /* GAPOChallenge.app */,
+				FA54A1782835E86A00043D3D /* GAPOChallengeTests.xctest */,
+				FA54A1822835E86A00043D3D /* GAPOChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA54A1642835E86700043D3D /* GAPOChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				FA54A1652835E86700043D3D /* AppDelegate.swift */,
+				FA54A1672835E86700043D3D /* SceneDelegate.swift */,
+				FA54A1692835E86700043D3D /* ViewController.swift */,
+				FA54A16B2835E86700043D3D /* Main.storyboard */,
+				FA54A16E2835E86900043D3D /* Assets.xcassets */,
+				FA54A1702835E86900043D3D /* LaunchScreen.storyboard */,
+				FA54A1732835E86900043D3D /* Info.plist */,
+			);
+			path = GAPOChallenge;
+			sourceTree = "<group>";
+		};
+		FA54A17B2835E86A00043D3D /* GAPOChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA54A17C2835E86A00043D3D /* GAPOChallengeTests.swift */,
+			);
+			path = GAPOChallengeTests;
+			sourceTree = "<group>";
+		};
+		FA54A1852835E86A00043D3D /* GAPOChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA54A1862835E86A00043D3D /* GAPOChallengeUITests.swift */,
+				FA54A1882835E86A00043D3D /* GAPOChallengeUITestsLaunchTests.swift */,
+			);
+			path = GAPOChallengeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA54A1612835E86700043D3D /* GAPOChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA54A18C2835E86A00043D3D /* Build configuration list for PBXNativeTarget "GAPOChallenge" */;
+			buildPhases = (
+				FA54A15E2835E86700043D3D /* Sources */,
+				FA54A15F2835E86700043D3D /* Frameworks */,
+				FA54A1602835E86700043D3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GAPOChallenge;
+			productName = GAPOChallenge;
+			productReference = FA54A1622835E86700043D3D /* GAPOChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA54A1772835E86A00043D3D /* GAPOChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA54A18F2835E86A00043D3D /* Build configuration list for PBXNativeTarget "GAPOChallengeTests" */;
+			buildPhases = (
+				FA54A1742835E86A00043D3D /* Sources */,
+				FA54A1752835E86A00043D3D /* Frameworks */,
+				FA54A1762835E86A00043D3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA54A17A2835E86A00043D3D /* PBXTargetDependency */,
+			);
+			name = GAPOChallengeTests;
+			productName = GAPOChallengeTests;
+			productReference = FA54A1782835E86A00043D3D /* GAPOChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA54A1812835E86A00043D3D /* GAPOChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA54A1922835E86A00043D3D /* Build configuration list for PBXNativeTarget "GAPOChallengeUITests" */;
+			buildPhases = (
+				FA54A17E2835E86A00043D3D /* Sources */,
+				FA54A17F2835E86A00043D3D /* Frameworks */,
+				FA54A1802835E86A00043D3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA54A1842835E86A00043D3D /* PBXTargetDependency */,
+			);
+			name = GAPOChallengeUITests;
+			productName = GAPOChallengeUITests;
+			productReference = FA54A1822835E86A00043D3D /* GAPOChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA54A15A2835E86700043D3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					FA54A1612835E86700043D3D = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					FA54A1772835E86A00043D3D = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = FA54A1612835E86700043D3D;
+					};
+					FA54A1812835E86A00043D3D = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = FA54A1612835E86700043D3D;
+					};
+				};
+			};
+			buildConfigurationList = FA54A15D2835E86700043D3D /* Build configuration list for PBXProject "GAPOChallenge" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA54A1592835E86700043D3D;
+			productRefGroup = FA54A1632835E86700043D3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA54A1612835E86700043D3D /* GAPOChallenge */,
+				FA54A1772835E86A00043D3D /* GAPOChallengeTests */,
+				FA54A1812835E86A00043D3D /* GAPOChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA54A1602835E86700043D3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA54A1722835E86900043D3D /* LaunchScreen.storyboard in Resources */,
+				FA54A16F2835E86900043D3D /* Assets.xcassets in Resources */,
+				FA54A16D2835E86700043D3D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA54A1762835E86A00043D3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA54A1802835E86A00043D3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA54A15E2835E86700043D3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA54A16A2835E86700043D3D /* ViewController.swift in Sources */,
+				FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */,
+				FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA54A1742835E86A00043D3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA54A17D2835E86A00043D3D /* GAPOChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA54A17E2835E86A00043D3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA54A1872835E86A00043D3D /* GAPOChallengeUITests.swift in Sources */,
+				FA54A1892835E86A00043D3D /* GAPOChallengeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA54A17A2835E86A00043D3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA54A1612835E86700043D3D /* GAPOChallenge */;
+			targetProxy = FA54A1792835E86A00043D3D /* PBXContainerItemProxy */;
+		};
+		FA54A1842835E86A00043D3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA54A1612835E86700043D3D /* GAPOChallenge */;
+			targetProxy = FA54A1832835E86A00043D3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA54A16B2835E86700043D3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA54A16C2835E86700043D3D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA54A1702835E86900043D3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA54A1712835E86900043D3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA54A18A2835E86A00043D3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA54A18B2835E86A00043D3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA54A18D2835E86A00043D3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GAPOChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mintpot.vn.GAPOChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA54A18E2835E86A00043D3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GAPOChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mintpot.vn.GAPOChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA54A1902835E86A00043D3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mintpot.vn.GAPOChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GAPOChallenge.app/GAPOChallenge";
+			};
+			name = Debug;
+		};
+		FA54A1912835E86A00043D3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mintpot.vn.GAPOChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GAPOChallenge.app/GAPOChallenge";
+			};
+			name = Release;
+		};
+		FA54A1932835E86A00043D3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mintpot.vn.GAPOChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GAPOChallenge;
+			};
+			name = Debug;
+		};
+		FA54A1942835E86A00043D3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mintpot.vn.GAPOChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GAPOChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA54A15D2835E86700043D3D /* Build configuration list for PBXProject "GAPOChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA54A18A2835E86A00043D3D /* Debug */,
+				FA54A18B2835E86A00043D3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA54A18C2835E86A00043D3D /* Build configuration list for PBXNativeTarget "GAPOChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA54A18D2835E86A00043D3D /* Debug */,
+				FA54A18E2835E86A00043D3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA54A18F2835E86A00043D3D /* Build configuration list for PBXNativeTarget "GAPOChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA54A1902835E86A00043D3D /* Debug */,
+				FA54A1912835E86A00043D3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA54A1922835E86A00043D3D /* Build configuration list for PBXNativeTarget "GAPOChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA54A1932835E86A00043D3D /* Debug */,
+				FA54A1942835E86A00043D3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA54A15A2835E86700043D3D /* Project object */;
+}
