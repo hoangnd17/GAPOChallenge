@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100E4DEB2E1FC59AC58DAB8A /* Pods_GAPOChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891F569B6A25BE0D141DC418 /* Pods_GAPOChallengeTests.framework */; };
+		2B5B3B744A5FF39209F48DF6 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C0EBC84B86496886CBED38 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework */; };
+		2D77F45BFD7C3740960218CA /* Pods_GAPOChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADD91DD08EC0A788464C8F0 /* Pods_GAPOChallenge.framework */; };
 		FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1652835E86700043D3D /* AppDelegate.swift */; };
 		FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1672835E86700043D3D /* SceneDelegate.swift */; };
 		FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1692835E86700043D3D /* NotificationListViewController.swift */; };
@@ -35,6 +38,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07852C32FDC96E9BAB939A99 /* Pods-GAPOChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAPOChallenge.debug.xcconfig"; path = "Target Support Files/Pods-GAPOChallenge/Pods-GAPOChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		52141160468EF4D807E5BD09 /* Pods-GAPOChallenge-GAPOChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAPOChallenge-GAPOChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-GAPOChallenge-GAPOChallengeUITests/Pods-GAPOChallenge-GAPOChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6EC479A0F77E32693E42FFC5 /* Pods-GAPOChallenge-GAPOChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAPOChallenge-GAPOChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-GAPOChallenge-GAPOChallengeUITests/Pods-GAPOChallenge-GAPOChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		891F569B6A25BE0D141DC418 /* Pods_GAPOChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAPOChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C6BDE8EF6301352FC40C307 /* Pods-GAPOChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAPOChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-GAPOChallengeTests/Pods-GAPOChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		CEB15B56CE58381FE9271CC8 /* Pods-GAPOChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAPOChallenge.release.xcconfig"; path = "Target Support Files/Pods-GAPOChallenge/Pods-GAPOChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		DADD91DD08EC0A788464C8F0 /* Pods_GAPOChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAPOChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCAC805D11D3A2D322362AB0 /* Pods-GAPOChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAPOChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-GAPOChallengeTests/Pods-GAPOChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7C0EBC84B86496886CBED38 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAPOChallenge_GAPOChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA54A1622835E86700043D3D /* GAPOChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAPOChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA54A1652835E86700043D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA54A1672835E86700043D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D77F45BFD7C3740960218CA /* Pods_GAPOChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				100E4DEB2E1FC59AC58DAB8A /* Pods_GAPOChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5B3B744A5FF39209F48DF6 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23EF1C35C906394C5CBF876E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DADD91DD08EC0A788464C8F0 /* Pods_GAPOChallenge.framework */,
+				F7C0EBC84B86496886CBED38 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework */,
+				891F569B6A25BE0D141DC418 /* Pods_GAPOChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB45A6C176B016D19EF7988B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07852C32FDC96E9BAB939A99 /* Pods-GAPOChallenge.debug.xcconfig */,
+				CEB15B56CE58381FE9271CC8 /* Pods-GAPOChallenge.release.xcconfig */,
+				52141160468EF4D807E5BD09 /* Pods-GAPOChallenge-GAPOChallengeUITests.debug.xcconfig */,
+				6EC479A0F77E32693E42FFC5 /* Pods-GAPOChallenge-GAPOChallengeUITests.release.xcconfig */,
+				DCAC805D11D3A2D322362AB0 /* Pods-GAPOChallengeTests.debug.xcconfig */,
+				8C6BDE8EF6301352FC40C307 /* Pods-GAPOChallengeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA54A1592835E86700043D3D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +120,8 @@
 				FA54A17B2835E86A00043D3D /* GAPOChallengeTests */,
 				FA54A1852835E86A00043D3D /* GAPOChallengeUITests */,
 				FA54A1632835E86700043D3D /* Products */,
+				DB45A6C176B016D19EF7988B /* Pods */,
+				23EF1C35C906394C5CBF876E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA54A18C2835E86A00043D3D /* Build configuration list for PBXNativeTarget "GAPOChallenge" */;
 			buildPhases = (
+				4F4FED7612D3446F7FABEBF9 /* [CP] Check Pods Manifest.lock */,
 				FA54A15E2835E86700043D3D /* Sources */,
 				FA54A15F2835E86700043D3D /* Frameworks */,
 				FA54A1602835E86700043D3D /* Resources */,
+				00F3FDFC125C7B9F48D58E81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA54A18F2835E86A00043D3D /* Build configuration list for PBXNativeTarget "GAPOChallengeTests" */;
 			buildPhases = (
+				D09CADC055A3408B9BFA196B /* [CP] Check Pods Manifest.lock */,
 				FA54A1742835E86A00043D3D /* Sources */,
 				FA54A1752835E86A00043D3D /* Frameworks */,
 				FA54A1762835E86A00043D3D /* Resources */,
@@ -166,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA54A1922835E86A00043D3D /* Build configuration list for PBXNativeTarget "GAPOChallengeUITests" */;
 			buildPhases = (
+				94554F43DCDA966A2E83F8BE /* [CP] Check Pods Manifest.lock */,
 				FA54A17E2835E86A00043D3D /* Sources */,
 				FA54A17F2835E86A00043D3D /* Frameworks */,
 				FA54A1802835E86A00043D3D /* Resources */,
+				586AE8F3A6000D77AEE5C3E1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +294,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00F3FDFC125C7B9F48D58E81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GAPOChallenge/Pods-GAPOChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GAPOChallenge/Pods-GAPOChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GAPOChallenge/Pods-GAPOChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F4FED7612D3446F7FABEBF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GAPOChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		586AE8F3A6000D77AEE5C3E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GAPOChallenge-GAPOChallengeUITests/Pods-GAPOChallenge-GAPOChallengeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GAPOChallenge-GAPOChallengeUITests/Pods-GAPOChallenge-GAPOChallengeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GAPOChallenge-GAPOChallengeUITests/Pods-GAPOChallenge-GAPOChallengeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94554F43DCDA966A2E83F8BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GAPOChallenge-GAPOChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D09CADC055A3408B9BFA196B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GAPOChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA54A15E2835E86700043D3D /* Sources */ = {
@@ -420,6 +569,7 @@
 		};
 		FA54A18D2835E86A00043D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07852C32FDC96E9BAB939A99 /* Pods-GAPOChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,6 +597,7 @@
 		};
 		FA54A18E2835E86A00043D3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEB15B56CE58381FE9271CC8 /* Pods-GAPOChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -474,6 +625,7 @@
 		};
 		FA54A1902835E86A00043D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCAC805D11D3A2D322362AB0 /* Pods-GAPOChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +645,7 @@
 		};
 		FA54A1912835E86A00043D3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C6BDE8EF6301352FC40C307 /* Pods-GAPOChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +665,7 @@
 		};
 		FA54A1932835E86A00043D3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52141160468EF4D807E5BD09 /* Pods-GAPOChallenge-GAPOChallengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -529,6 +683,7 @@
 		};
 		FA54A1942835E86A00043D3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC479A0F77E32693E42FFC5 /* Pods-GAPOChallenge-GAPOChallengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
