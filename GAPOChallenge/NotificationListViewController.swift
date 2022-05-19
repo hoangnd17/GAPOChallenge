@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NotificationListViewController.swift
 //  GAPOChallenge
 //
 //  Created by Nguyen Dinh Hoang on 5/19/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NotificationListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
