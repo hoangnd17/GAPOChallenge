@@ -10,6 +10,7 @@
 		100E4DEB2E1FC59AC58DAB8A /* Pods_GAPOChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891F569B6A25BE0D141DC418 /* Pods_GAPOChallengeTests.framework */; };
 		2B5B3B744A5FF39209F48DF6 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C0EBC84B86496886CBED38 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework */; };
 		2D77F45BFD7C3740960218CA /* Pods_GAPOChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADD91DD08EC0A788464C8F0 /* Pods_GAPOChallenge.framework */; };
+		FA0B497B2835EC7000623018 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B497A2835EC7000623018 /* AppCoordinator.swift */; };
 		FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1652835E86700043D3D /* AppDelegate.swift */; };
 		FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1672835E86700043D3D /* SceneDelegate.swift */; };
 		FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1692835E86700043D3D /* NotificationListViewController.swift */; };
@@ -47,6 +48,7 @@
 		DADD91DD08EC0A788464C8F0 /* Pods_GAPOChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAPOChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAC805D11D3A2D322362AB0 /* Pods-GAPOChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAPOChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-GAPOChallengeTests/Pods-GAPOChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7C0EBC84B86496886CBED38 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAPOChallenge_GAPOChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0B497A2835EC7000623018 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FA54A1622835E86700043D3D /* GAPOChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAPOChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA54A1652835E86700043D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA54A1672835E86700043D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,8 +111,36 @@
 				DCAC805D11D3A2D322362AB0 /* Pods-GAPOChallengeTests.debug.xcconfig */,
 				8C6BDE8EF6301352FC40C307 /* Pods-GAPOChallengeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA0B49782835EB7000623018 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B497C2835EDEA00623018 /* NoticationList */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		FA0B49792835EB8C00623018 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B497A2835EC7000623018 /* AppCoordinator.swift */,
+				FA54A1652835E86700043D3D /* AppDelegate.swift */,
+				FA54A1672835E86700043D3D /* SceneDelegate.swift */,
+				FA54A16E2835E86900043D3D /* Assets.xcassets */,
+				FA54A1702835E86900043D3D /* LaunchScreen.storyboard */,
+				FA54A1732835E86900043D3D /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FA0B497C2835EDEA00623018 /* NoticationList */ = {
+			isa = PBXGroup;
+			children = (
+				FA54A1692835E86700043D3D /* NotificationListViewController.swift */,
+			);
+			path = NoticationList;
 			sourceTree = "<group>";
 		};
 		FA54A1592835E86700043D3D = {
@@ -138,12 +168,8 @@
 		FA54A1642835E86700043D3D /* GAPOChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				FA54A1652835E86700043D3D /* AppDelegate.swift */,
-				FA54A1672835E86700043D3D /* SceneDelegate.swift */,
-				FA54A1692835E86700043D3D /* NotificationListViewController.swift */,
-				FA54A16E2835E86900043D3D /* Assets.xcassets */,
-				FA54A1702835E86900043D3D /* LaunchScreen.storyboard */,
-				FA54A1732835E86900043D3D /* Info.plist */,
+				FA0B49792835EB8C00623018 /* App */,
+				FA0B49782835EB7000623018 /* Scene */,
 			);
 			path = GAPOChallenge;
 			sourceTree = "<group>";
@@ -406,6 +432,7 @@
 				FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */,
 				FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */,
 				FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */,
+				FA0B497B2835EC7000623018 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +530,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -557,7 +584,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -576,10 +603,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GAPOChallenge/Info.plist;
+				INFOPLIST_FILE = GAPOChallenge/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -604,10 +630,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GAPOChallenge/Info.plist;
+				INFOPLIST_FILE = GAPOChallenge/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

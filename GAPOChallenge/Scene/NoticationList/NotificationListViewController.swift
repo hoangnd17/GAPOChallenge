@@ -8,6 +8,11 @@
 import UIKit
 
 class NotificationListViewController: UIViewController {
+    
+    override func loadView() {
+        view = UIView(frame: UIScreen.main.bounds)
+        view.backgroundColor = .lightGray
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
