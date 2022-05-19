@@ -11,6 +11,7 @@
 		2B5B3B744A5FF39209F48DF6 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C0EBC84B86496886CBED38 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework */; };
 		2D77F45BFD7C3740960218CA /* Pods_GAPOChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADD91DD08EC0A788464C8F0 /* Pods_GAPOChallenge.framework */; };
 		FA0B497B2835EC7000623018 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B497A2835EC7000623018 /* AppCoordinator.swift */; };
+		FA0B497F2836FEF500623018 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = FA0B497E2836FEF500623018 /* mock.json */; };
 		FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1652835E86700043D3D /* AppDelegate.swift */; };
 		FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1672835E86700043D3D /* SceneDelegate.swift */; };
 		FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1692835E86700043D3D /* NotificationListViewController.swift */; };
@@ -49,6 +50,7 @@
 		DCAC805D11D3A2D322362AB0 /* Pods-GAPOChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GAPOChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-GAPOChallengeTests/Pods-GAPOChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7C0EBC84B86496886CBED38 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAPOChallenge_GAPOChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0B497A2835EC7000623018 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FA0B497E2836FEF500623018 /* mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock.json; sourceTree = "<group>"; };
 		FA54A1622835E86700043D3D /* GAPOChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAPOChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA54A1652835E86700043D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA54A1672835E86700043D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +130,6 @@
 				FA0B497A2835EC7000623018 /* AppCoordinator.swift */,
 				FA54A1652835E86700043D3D /* AppDelegate.swift */,
 				FA54A1672835E86700043D3D /* SceneDelegate.swift */,
-				FA54A16E2835E86900043D3D /* Assets.xcassets */,
 				FA54A1702835E86900043D3D /* LaunchScreen.storyboard */,
 				FA54A1732835E86900043D3D /* Info.plist */,
 			);
@@ -141,6 +142,15 @@
 				FA54A1692835E86700043D3D /* NotificationListViewController.swift */,
 			);
 			path = NoticationList;
+			sourceTree = "<group>";
+		};
+		FA0B497D2835EE3100623018 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B497E2836FEF500623018 /* mock.json */,
+				FA54A16E2835E86900043D3D /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		FA54A1592835E86700043D3D = {
@@ -168,6 +178,7 @@
 		FA54A1642835E86700043D3D /* GAPOChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				FA0B497D2835EE3100623018 /* Resource */,
 				FA0B49792835EB8C00623018 /* App */,
 				FA0B49782835EB7000623018 /* Scene */,
 			);
@@ -302,6 +313,7 @@
 			files = (
 				FA54A1722835E86900043D3D /* LaunchScreen.storyboard in Resources */,
 				FA54A16F2835E86900043D3D /* Assets.xcassets in Resources */,
+				FA0B497F2836FEF500623018 /* mock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
