@@ -1,0 +1,42 @@
+[
+  {
+    "notification": {
+      "message": {
+        "highlights": "Angela Baby",
+        "text": "thích một bài viết của bạn",
+        "timestamp": "20/09/2019, 11:57"
+      }
+    },
+    "image": ""
+  },
+  {
+    "notification": {
+      "message": {
+        "highlights": "Mamie Johnson",
+        "text": "thích bình luận của bạn",
+        "timestamp": "20/09/2019, 11:57"
+      }
+    },
+    "image": ""
+  },
+  {
+    "notification": {
+      "message": {
+        "highlights": "Anne Copeland",
+        "text": "bày tỏ cảm xúc về một bài viết của bạn",
+        "timestamp": "20/09/2019, 11:57"
+      }
+    },
+    "image": ""
+  },
+  {
+    "notification": {
+      "message": {
+        "highlights": "Anne Copeland",
+        "text": "bày tỏ cảm xúc về một bình luận của bạn",
+        "timestamp": "20/09/2019, 11:57"
+      }
+    },
+    "image": ""
+  }
+]

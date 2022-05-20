@@ -12,6 +12,8 @@
 		2D77F45BFD7C3740960218CA /* Pods_GAPOChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADD91DD08EC0A788464C8F0 /* Pods_GAPOChallenge.framework */; };
 		FA0B497B2835EC7000623018 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B497A2835EC7000623018 /* AppCoordinator.swift */; };
 		FA0B497F2836FEF500623018 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = FA0B497E2836FEF500623018 /* mock.json */; };
+		FA0B498B2837062D00623018 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B498A2837062D00623018 /* Notification.swift */; };
+		FA0B498D28370ADB00623018 /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B498C28370ADB00623018 /* NotificationRepository.swift */; };
 		FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1652835E86700043D3D /* AppDelegate.swift */; };
 		FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1672835E86700043D3D /* SceneDelegate.swift */; };
 		FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1692835E86700043D3D /* NotificationListViewController.swift */; };
@@ -51,6 +53,8 @@
 		F7C0EBC84B86496886CBED38 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GAPOChallenge_GAPOChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0B497A2835EC7000623018 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FA0B497E2836FEF500623018 /* mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock.json; sourceTree = "<group>"; };
+		FA0B498A2837062D00623018 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		FA0B498C28370ADB00623018 /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
 		FA54A1622835E86700043D3D /* GAPOChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAPOChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA54A1652835E86700043D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA54A1672835E86700043D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,15 +120,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		FA0B49782835EB7000623018 /* Scene */ = {
+		FA0B49782835EB7000623018 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FA0B497C2835EDEA00623018 /* NoticationList */,
+				FA0B497C2835EDEA00623018 /* NoticationScene */,
 			);
-			path = Scene;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		FA0B49792835EB8C00623018 /* App */ = {
+		FA0B49792835EB8C00623018 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				FA0B497A2835EC7000623018 /* AppCoordinator.swift */,
@@ -133,24 +137,80 @@
 				FA54A1702835E86900043D3D /* LaunchScreen.storyboard */,
 				FA54A1732835E86900043D3D /* Info.plist */,
 			);
-			path = App;
+			path = Application;
 			sourceTree = "<group>";
 		};
-		FA0B497C2835EDEA00623018 /* NoticationList */ = {
+		FA0B497C2835EDEA00623018 /* NoticationScene */ = {
 			isa = PBXGroup;
 			children = (
-				FA54A1692835E86700043D3D /* NotificationListViewController.swift */,
+				FA0B49832837045500623018 /* Views */,
+				FA0B49842837045C00623018 /* ViewModels */,
 			);
-			path = NoticationList;
+			path = NoticationScene;
 			sourceTree = "<group>";
 		};
-		FA0B497D2835EE3100623018 /* Resource */ = {
+		FA0B497D2835EE3100623018 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				FA0B497E2836FEF500623018 /* mock.json */,
 				FA54A16E2835E86900043D3D /* Assets.xcassets */,
 			);
-			path = Resource;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA0B49832837045500623018 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA54A1692835E86700043D3D /* NotificationListViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA0B49842837045C00623018 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FA0B4985283704A500623018 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B4987283704E400623018 /* Entities */,
+				FA0B4988283704E900623018 /* UseCases */,
+				FA0B4989283704FD00623018 /* Repositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FA0B4986283704B100623018 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FA0B4987283704E400623018 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B498A2837062D00623018 /* Notification.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FA0B4988283704E900623018 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		FA0B4989283704FD00623018 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B498C28370ADB00623018 /* NotificationRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		FA54A1592835E86700043D3D = {
@@ -178,9 +238,11 @@
 		FA54A1642835E86700043D3D /* GAPOChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				FA0B497D2835EE3100623018 /* Resource */,
-				FA0B49792835EB8C00623018 /* App */,
-				FA0B49782835EB7000623018 /* Scene */,
+				FA0B49792835EB8C00623018 /* Application */,
+				FA0B49782835EB7000623018 /* Presentation */,
+				FA0B4985283704A500623018 /* Domain */,
+				FA0B4986283704B100623018 /* Data */,
+				FA0B497D2835EE3100623018 /* Resources */,
 			);
 			path = GAPOChallenge;
 			sourceTree = "<group>";
@@ -442,8 +504,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */,
+				FA0B498B2837062D00623018 /* Notification.swift in Sources */,
 				FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */,
 				FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */,
+				FA0B498D28370ADB00623018 /* NotificationRepository.swift in Sources */,
 				FA0B497B2835EC7000623018 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
