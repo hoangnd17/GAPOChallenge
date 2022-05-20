@@ -66,4 +66,26 @@ class NotificationRepositoryTest: XCTestCase {
         waitForExpectations(timeout: 3.0)
         XCTAssertTrue(result.count > 0)
     }
+    
+    func testFetchNotificationByQuery_hasNoNotification_IfQueryIsInValid() {
+        // given
+        let expectation = expectation(description: "Notifaction page has at least one notification ")
+        expectation.expectedFulfillmentCount = 1
+        let query = NotificationQuery(text: "Thích")
+        
+        // when
+        sut.fetchNotificationByQuery(query) { [weak self] result in
+            switch result {
+            case .success(let page):
+                self?.result = page.data
+            case .failure(_):
+                break
+            }
+            expectation.fulfill()
+        }
+        
+        // then
+        waitForExpectations(timeout: 3.0)
+        XCTAssertTrue(result.count == 0)
+    }
 }
