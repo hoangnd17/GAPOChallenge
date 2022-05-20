@@ -21,6 +21,9 @@
 		FA0B49942837736300623018 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1672835E86700043D3D /* SceneDelegate.swift */; };
 		FA0B49962837739B00623018 /* NotificationRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49952837739B00623018 /* NotificationRepositoryTest.swift */; };
 		FA0B4998283784B900623018 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = FA0B497E2836FEF500623018 /* mock.json */; };
+		FA0B499A28378C0900623018 /* FetchListNotificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B499928378C0900623018 /* FetchListNotificationUseCase.swift */; };
+		FA0B499B28378C0D00623018 /* FetchListNotificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B499928378C0900623018 /* FetchListNotificationUseCase.swift */; };
+		FA0B499F28378C5F00623018 /* FetchListNoficationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B499E28378C5F00623018 /* FetchListNoficationUseCase.swift */; };
 		FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1652835E86700043D3D /* AppDelegate.swift */; };
 		FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1672835E86700043D3D /* SceneDelegate.swift */; };
 		FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1692835E86700043D3D /* NotificationListViewController.swift */; };
@@ -53,6 +56,8 @@
 		FA0B498A2837062D00623018 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		FA0B498C28370ADB00623018 /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
 		FA0B49952837739B00623018 /* NotificationRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepositoryTest.swift; sourceTree = "<group>"; };
+		FA0B499928378C0900623018 /* FetchListNotificationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListNotificationUseCase.swift; sourceTree = "<group>"; };
+		FA0B499E28378C5F00623018 /* FetchListNoficationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListNoficationUseCase.swift; sourceTree = "<group>"; };
 		FA54A1622835E86700043D3D /* GAPOChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAPOChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA54A1652835E86700043D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA54A1672835E86700043D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,7 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				FA0B4987283704E400623018 /* Entities */,
+				FA0B498A2837062D00623018 /* Notification.swift */,
 				FA0B4988283704E900623018 /* UseCases */,
+				FA0B498E2837726F00623018 /* Repositories */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 		FA0B4986283704B100623018 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FA0B49A0283794EB00623018 /* Mock */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -178,7 +186,6 @@
 		FA0B4987283704E400623018 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				FA0B498A2837062D00623018 /* Notification.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -186,6 +193,7 @@
 		FA0B4988283704E900623018 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				FA0B499928378C0900623018 /* FetchListNotificationUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -201,8 +209,33 @@
 		FA0B4997283773A700623018 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				FA0B49952837739B00623018 /* NotificationRepositoryTest.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		FA0B499C28378C1F00623018 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B4997283773A700623018 /* Repository */,
+				FA0B499D28378C3000623018 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FA0B499D28378C3000623018 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B499E28378C5F00623018 /* FetchListNoficationUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		FA0B49A0283794EB00623018 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		FA54A1592835E86700043D3D = {
@@ -232,7 +265,6 @@
 				FA0B49782835EB7000623018 /* Presentation */,
 				FA0B4985283704A500623018 /* Domain */,
 				FA0B4986283704B100623018 /* Data */,
-				FA0B498E2837726F00623018 /* Repositories */,
 				FA0B497D2835EE3100623018 /* Resources */,
 			);
 			path = GAPOChallenge;
@@ -241,8 +273,7 @@
 		FA54A17B2835E86A00043D3D /* GAPOChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA0B4997283773A700623018 /* Repository */,
-				FA0B49952837739B00623018 /* NotificationRepositoryTest.swift */,
+				FA0B499C28378C1F00623018 /* Domain */,
 			);
 			path = GAPOChallengeTests;
 			sourceTree = "<group>";
@@ -419,6 +450,7 @@
 				FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */,
 				FA0B498B2837062D00623018 /* Notification.swift in Sources */,
 				FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */,
+				FA0B499A28378C0900623018 /* FetchListNotificationUseCase.swift in Sources */,
 				FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */,
 				FA0B498D28370ADB00623018 /* NotificationRepository.swift in Sources */,
 				FA0B497B2835EC7000623018 /* AppCoordinator.swift in Sources */,
@@ -433,9 +465,11 @@
 				FA0B49942837736300623018 /* SceneDelegate.swift in Sources */,
 				FA0B498F2837734400623018 /* NotificationRepository.swift in Sources */,
 				FA0B49912837735700623018 /* NotificationListViewController.swift in Sources */,
+				FA0B499F28378C5F00623018 /* FetchListNoficationUseCase.swift in Sources */,
 				FA0B49962837739B00623018 /* NotificationRepositoryTest.swift in Sources */,
 				FA0B49922837735E00623018 /* AppCoordinator.swift in Sources */,
 				FA0B49902837735100623018 /* Notification.swift in Sources */,
+				FA0B499B28378C0D00623018 /* FetchListNotificationUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
