@@ -24,6 +24,11 @@
 		FA0B499A28378C0900623018 /* FetchListNotificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B499928378C0900623018 /* FetchListNotificationUseCase.swift */; };
 		FA0B499B28378C0D00623018 /* FetchListNotificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B499928378C0900623018 /* FetchListNotificationUseCase.swift */; };
 		FA0B499F28378C5F00623018 /* FetchListNoficationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B499E28378C5F00623018 /* FetchListNoficationUseCase.swift */; };
+		FA0B49A42837E5A300623018 /* NotificationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49A32837E5A300623018 /* NotificationListViewModel.swift */; };
+		FA0B49A52837E5A300623018 /* NotificationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49A32837E5A300623018 /* NotificationListViewModel.swift */; };
+		FA0B49A72837E9F500623018 /* NotificationItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49A62837E9F500623018 /* NotificationItemViewModel.swift */; };
+		FA0B49A82837E9F500623018 /* NotificationItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49A62837E9F500623018 /* NotificationItemViewModel.swift */; };
+		FA0B49AA2837EAF200623018 /* NotificationListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49A92837EAF200623018 /* NotificationListViewModelTest.swift */; };
 		FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1652835E86700043D3D /* AppDelegate.swift */; };
 		FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1672835E86700043D3D /* SceneDelegate.swift */; };
 		FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1692835E86700043D3D /* NotificationListViewController.swift */; };
@@ -58,6 +63,9 @@
 		FA0B49952837739B00623018 /* NotificationRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepositoryTest.swift; sourceTree = "<group>"; };
 		FA0B499928378C0900623018 /* FetchListNotificationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListNotificationUseCase.swift; sourceTree = "<group>"; };
 		FA0B499E28378C5F00623018 /* FetchListNoficationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListNoficationUseCase.swift; sourceTree = "<group>"; };
+		FA0B49A32837E5A300623018 /* NotificationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListViewModel.swift; sourceTree = "<group>"; };
+		FA0B49A62837E9F500623018 /* NotificationItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItemViewModel.swift; sourceTree = "<group>"; };
+		FA0B49A92837EAF200623018 /* NotificationListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListViewModelTest.swift; sourceTree = "<group>"; };
 		FA54A1622835E86700043D3D /* GAPOChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAPOChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA54A1652835E86700043D3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA54A1672835E86700043D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +168,8 @@
 		FA0B49842837045C00623018 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FA0B49A32837E5A300623018 /* NotificationListViewModel.swift */,
+				FA0B49A62837E9F500623018 /* NotificationItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -238,6 +248,22 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		FA0B49A12837E57B00623018 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B49A22837E58000623018 /* ViewModel */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FA0B49A22837E58000623018 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B49A92837EAF200623018 /* NotificationListViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FA54A1592835E86700043D3D = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +299,7 @@
 		FA54A17B2835E86A00043D3D /* GAPOChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA0B49A12837E57B00623018 /* Application */,
 				FA0B499C28378C1F00623018 /* Domain */,
 			);
 			path = GAPOChallengeTests;
@@ -451,6 +478,8 @@
 				FA0B498B2837062D00623018 /* Notification.swift in Sources */,
 				FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */,
 				FA0B499A28378C0900623018 /* FetchListNotificationUseCase.swift in Sources */,
+				FA0B49A72837E9F500623018 /* NotificationItemViewModel.swift in Sources */,
+				FA0B49A42837E5A300623018 /* NotificationListViewModel.swift in Sources */,
 				FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */,
 				FA0B498D28370ADB00623018 /* NotificationRepository.swift in Sources */,
 				FA0B497B2835EC7000623018 /* AppCoordinator.swift in Sources */,
@@ -467,9 +496,12 @@
 				FA0B49912837735700623018 /* NotificationListViewController.swift in Sources */,
 				FA0B499F28378C5F00623018 /* FetchListNoficationUseCase.swift in Sources */,
 				FA0B49962837739B00623018 /* NotificationRepositoryTest.swift in Sources */,
+				FA0B49A52837E5A300623018 /* NotificationListViewModel.swift in Sources */,
 				FA0B49922837735E00623018 /* AppCoordinator.swift in Sources */,
 				FA0B49902837735100623018 /* Notification.swift in Sources */,
+				FA0B49AA2837EAF200623018 /* NotificationListViewModelTest.swift in Sources */,
 				FA0B499B28378C0D00623018 /* FetchListNotificationUseCase.swift in Sources */,
+				FA0B49A82837E9F500623018 /* NotificationItemViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
