@@ -6,17 +6,19 @@
 //
 
 import Foundation
+import UIKit
 
-protocol NotificationItemViewModelInput {
+final class NotificationItemViewModel {
+    
+    let text: String
+    let image: String
+    let timestamp: TimeInterval
+    
+    init(notification: Notification) {
+        self.text = notification.message.text
+        self.image = notification.image
+        self.timestamp = notification.createdAt
+    }
     
 }
 
-protocol NotificationItemViewModelOutput {
-    
-}
-
-protocol NotificationItemViewModel: NotificationItemViewModelInput, NotificationItemViewModelOutput { }
-
-final class DefaultNotificationItemViewModel: NotificationItemViewModel {
-    
-}

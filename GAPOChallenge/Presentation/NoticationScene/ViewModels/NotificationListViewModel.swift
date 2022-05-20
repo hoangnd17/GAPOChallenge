@@ -22,6 +22,8 @@ protocol NotificationListViewModelOutput {
 protocol NotificationListViewModel: NotificationListViewModelInput, NotificationListViewModelOutput { }
 
 final class DefaultNotificationListViewModel: NotificationListViewModel {
+    
+    private let useCase: FetchListNoficationUseCase
 
     // MARK: Output
     var items: Driver<[NotificationItemViewModel]> = .empty()
@@ -29,7 +31,7 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     // MARK: Input
     
     func viewDidLoad() {
-        
+        loadItems()
     }
     
     func didSelectItem(at index: Int) {
@@ -38,5 +40,25 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     
     func didSearch(query: String) {
         
+    }
+    
+    typealias Dependency = FetchListNoficationUseCase
+    
+    init(with useCase: Dependency) {
+        self.useCase = useCase
+    }
+    
+    private func loadItems() {
+       items = useCase.execute()
+            .map({ result -> [Notification] in
+                switch result {
+                case .success(let notifications):
+                    return notifications
+                case .failure(_):
+                    return []
+                }
+            })
+            .map { $0.map(NotificationItemViewModel.init) }
+            .asDriver(onErrorJustReturn: [])
     }
 }

@@ -8,13 +8,12 @@
 import Foundation
 import RxSwift
 
-typealias ResultValue = Result<[Notification], Error>
+typealias NotificationListValue = Result<[Notification], Error>
 protocol FetchListNoficationUseCase {
-    func execute() -> Observable<ResultValue>
+    func execute() -> Observable<NotificationListValue>
 }
 
 final class DefaultFetchListNoficationUseCase: FetchListNoficationUseCase {
-    
     
     private let repository: NotificationRepository
     
@@ -22,8 +21,8 @@ final class DefaultFetchListNoficationUseCase: FetchListNoficationUseCase {
         self.repository = repository
     }
     
-    func execute() -> Observable<ResultValue> {
-        return Observable<ResultValue>.create { observer in
+    func execute() -> Observable<NotificationListValue> {
+        return Observable<NotificationListValue>.create { observer in
             
             self.repository.fetchNotificationList { result in
                 switch result {
