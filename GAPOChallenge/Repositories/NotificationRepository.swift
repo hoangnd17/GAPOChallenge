@@ -16,8 +16,7 @@ struct MockNotificationRepository: NotificationRepository {
     
     static let page: NotificationPage = {
         guard let path = Bundle.main.path(forResource: "mock", ofType: "json"),
-             let url = URL(string: path),
-              let data = try? Data(contentsOf: url)
+              let data = try? Data(contentsOf: URL(fileURLWithPath: path))
         else {
             fatalError("File mock.json does not exist")
         }
