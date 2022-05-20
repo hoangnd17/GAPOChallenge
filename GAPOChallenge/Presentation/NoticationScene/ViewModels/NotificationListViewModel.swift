@@ -27,21 +27,7 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
 
     // MARK: Output
     var items: Driver<[NotificationItemViewModel]> = .empty()
-    
-    // MARK: Input
-    
-    func viewDidLoad() {
-        loadItems()
-    }
-    
-    func didSelectItem(at index: Int) {
-        
-    }
-    
-    func didSearch(query: String) {
-        
-    }
-    
+
     typealias Dependency = FetchListNoficationUseCase
     
     init(with useCase: Dependency) {
@@ -61,4 +47,21 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
             .map { $0.map(NotificationItemViewModel.init) }
             .asDriver(onErrorJustReturn: [])
     }
+    
+}
+
+extension DefaultNotificationListViewModel {
+    
+    func viewDidLoad() {
+        loadItems()
+    }
+    
+    func didSelectItem(at index: Int) {
+        
+    }
+    
+    func didSearch(query: String) {
+        
+    }
+    
 }
