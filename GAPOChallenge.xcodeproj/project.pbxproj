@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		100E4DEB2E1FC59AC58DAB8A /* Pods_GAPOChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891F569B6A25BE0D141DC418 /* Pods_GAPOChallengeTests.framework */; };
-		2B5B3B744A5FF39209F48DF6 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C0EBC84B86496886CBED38 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework */; };
 		2D77F45BFD7C3740960218CA /* Pods_GAPOChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADD91DD08EC0A788464C8F0 /* Pods_GAPOChallenge.framework */; };
 		FA0B497B2835EC7000623018 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B497A2835EC7000623018 /* AppCoordinator.swift */; };
 		FA0B497F2836FEF500623018 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = FA0B497E2836FEF500623018 /* mock.json */; };
@@ -27,19 +26,10 @@
 		FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1692835E86700043D3D /* NotificationListViewController.swift */; };
 		FA54A16F2835E86900043D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA54A16E2835E86900043D3D /* Assets.xcassets */; };
 		FA54A1722835E86900043D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA54A1702835E86900043D3D /* LaunchScreen.storyboard */; };
-		FA54A1872835E86A00043D3D /* GAPOChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1862835E86A00043D3D /* GAPOChallengeUITests.swift */; };
-		FA54A1892835E86A00043D3D /* GAPOChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1882835E86A00043D3D /* GAPOChallengeUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		FA54A1792835E86A00043D3D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA54A15A2835E86700043D3D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA54A1612835E86700043D3D;
-			remoteInfo = GAPOChallenge;
-		};
-		FA54A1832835E86A00043D3D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA54A15A2835E86700043D3D /* Project object */;
 			proxyType = 1;
@@ -71,9 +61,6 @@
 		FA54A1712835E86900043D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA54A1732835E86900043D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA54A1782835E86A00043D3D /* GAPOChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAPOChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA54A1822835E86A00043D3D /* GAPOChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAPOChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA54A1862835E86A00043D3D /* GAPOChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAPOChallengeUITests.swift; sourceTree = "<group>"; };
-		FA54A1882835E86A00043D3D /* GAPOChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAPOChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,14 +77,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				100E4DEB2E1FC59AC58DAB8A /* Pods_GAPOChallengeTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA54A17F2835E86A00043D3D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2B5B3B744A5FF39209F48DF6 /* Pods_GAPOChallenge_GAPOChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +210,6 @@
 			children = (
 				FA54A1642835E86700043D3D /* GAPOChallenge */,
 				FA54A17B2835E86A00043D3D /* GAPOChallengeTests */,
-				FA54A1852835E86A00043D3D /* GAPOChallengeUITests */,
 				FA54A1632835E86700043D3D /* Products */,
 				DB45A6C176B016D19EF7988B /* Pods */,
 				23EF1C35C906394C5CBF876E /* Frameworks */,
@@ -243,7 +221,6 @@
 			children = (
 				FA54A1622835E86700043D3D /* GAPOChallenge.app */,
 				FA54A1782835E86A00043D3D /* GAPOChallengeTests.xctest */,
-				FA54A1822835E86A00043D3D /* GAPOChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -268,15 +245,6 @@
 				FA0B49952837739B00623018 /* NotificationRepositoryTest.swift */,
 			);
 			path = GAPOChallengeTests;
-			sourceTree = "<group>";
-		};
-		FA54A1852835E86A00043D3D /* GAPOChallengeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FA54A1862835E86A00043D3D /* GAPOChallengeUITests.swift */,
-				FA54A1882835E86A00043D3D /* GAPOChallengeUITestsLaunchTests.swift */,
-			);
-			path = GAPOChallengeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,26 +288,6 @@
 			productReference = FA54A1782835E86A00043D3D /* GAPOChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FA54A1812835E86A00043D3D /* GAPOChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA54A1922835E86A00043D3D /* Build configuration list for PBXNativeTarget "GAPOChallengeUITests" */;
-			buildPhases = (
-				94554F43DCDA966A2E83F8BE /* [CP] Check Pods Manifest.lock */,
-				FA54A17E2835E86A00043D3D /* Sources */,
-				FA54A17F2835E86A00043D3D /* Frameworks */,
-				FA54A1802835E86A00043D3D /* Resources */,
-				586AE8F3A6000D77AEE5C3E1 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FA54A1842835E86A00043D3D /* PBXTargetDependency */,
-			);
-			name = GAPOChallengeUITests;
-			productName = GAPOChallengeUITests;
-			productReference = FA54A1822835E86A00043D3D /* GAPOChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -354,10 +302,6 @@
 						CreatedOnToolsVersion = 13.4;
 					};
 					FA54A1772835E86A00043D3D = {
-						CreatedOnToolsVersion = 13.4;
-						TestTargetID = FA54A1612835E86700043D3D;
-					};
-					FA54A1812835E86A00043D3D = {
 						CreatedOnToolsVersion = 13.4;
 						TestTargetID = FA54A1612835E86700043D3D;
 					};
@@ -378,7 +322,6 @@
 			targets = (
 				FA54A1612835E86700043D3D /* GAPOChallenge */,
 				FA54A1772835E86A00043D3D /* GAPOChallengeTests */,
-				FA54A1812835E86A00043D3D /* GAPOChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -399,13 +342,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0B4998283784B900623018 /* mock.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA54A1802835E86A00043D3D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,45 +381,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-GAPOChallenge-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		586AE8F3A6000D77AEE5C3E1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GAPOChallenge-GAPOChallengeUITests/Pods-GAPOChallenge-GAPOChallengeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GAPOChallenge-GAPOChallengeUITests/Pods-GAPOChallenge-GAPOChallengeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GAPOChallenge-GAPOChallengeUITests/Pods-GAPOChallenge-GAPOChallengeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		94554F43DCDA966A2E83F8BE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GAPOChallenge-GAPOChallengeUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -542,15 +439,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA54A17E2835E86A00043D3D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA54A1872835E86A00043D3D /* GAPOChallengeUITests.swift in Sources */,
-				FA54A1892835E86A00043D3D /* GAPOChallengeUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -558,11 +446,6 @@
 			isa = PBXTargetDependency;
 			target = FA54A1612835E86700043D3D /* GAPOChallenge */;
 			targetProxy = FA54A1792835E86A00043D3D /* PBXContainerItemProxy */;
-		};
-		FA54A1842835E86A00043D3D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA54A1612835E86700043D3D /* GAPOChallenge */;
-			targetProxy = FA54A1832835E86A00043D3D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -786,42 +669,6 @@
 			};
 			name = Release;
 		};
-		FA54A1932835E86A00043D3D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52141160468EF4D807E5BD09 /* Pods-GAPOChallenge-GAPOChallengeUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mintpot.vn.GAPOChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GAPOChallenge;
-			};
-			name = Debug;
-		};
-		FA54A1942835E86A00043D3D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EC479A0F77E32693E42FFC5 /* Pods-GAPOChallenge-GAPOChallengeUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mintpot.vn.GAPOChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GAPOChallenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -848,15 +695,6 @@
 			buildConfigurations = (
 				FA54A1902835E86A00043D3D /* Debug */,
 				FA54A1912835E86A00043D3D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FA54A1922835E86A00043D3D /* Build configuration list for PBXNativeTarget "GAPOChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA54A1932835E86A00043D3D /* Debug */,
-				FA54A1942835E86A00043D3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

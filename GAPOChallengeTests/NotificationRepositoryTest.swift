@@ -8,9 +8,7 @@
 import XCTest
 
 class NotificationRepositoryTest: XCTestCase {
-    
-    
-    
+
     private var sut: MockNotificationRepository!
     private var result: [Notification]!
     
@@ -26,13 +24,35 @@ class NotificationRepositoryTest: XCTestCase {
         super.tearDown()
     }
     
-    func testFetchNotificationPage_hasAtLeastOneNotification() {
+    func testFetchNotificationList_hasAtLeastOneNotification() {
         // given
         let expectation = expectation(description: "Notifaction page has at least one notification ")
         expectation.expectedFulfillmentCount = 1
         
         // when
         sut.fetchNotificationList { [weak self] result in
+            switch result {
+            case .success(let page):
+                self?.result = page.data
+            case .failure(_):
+                break
+            }
+            expectation.fulfill()
+        }
+        
+        // then
+        waitForExpectations(timeout: 3.0)
+        XCTAssertTrue(result.count > 0)
+    }
+    
+    func testFetchNotificationByQuery_hasAtLeastOneNotification_IfQueryIsValid() {
+        // given
+        let expectation = expectation(description: "Notifaction page has at least one notification ")
+        expectation.expectedFulfillmentCount = 1
+        let query = NotificationQuery(text: "Thich")
+        
+        // when
+        sut.fetchNotificationByQuery(query) { [weak self] result in
             switch result {
             case .success(let page):
                 self?.result = page.data
