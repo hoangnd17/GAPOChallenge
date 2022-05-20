@@ -13,6 +13,7 @@ protocol NotificationListViewModelInput {
     func viewDidLoad()
     func didSelectItem(at index: Int)
     func didSearch(query: String)
+    func didCancelSearch()
 }
 
 protocol NotificationListViewModelOutput {
@@ -64,4 +65,7 @@ extension DefaultNotificationListViewModel {
         
     }
     
+    func didCancelSearch() {
+        
+    }
 }
