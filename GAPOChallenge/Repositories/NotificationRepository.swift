@@ -33,7 +33,13 @@ struct MockNotificationRepository: NotificationRepository {
     }
     
     func fetchNotificationByQuery(_ query: NotificationQuery, completion: @escaping (Result<NotificationPage, Error>) -> Void) {
+        let searchingText = query.text
+        let notifications = MockNotificationRepository.page.data
+        let filterResult =
+        notifications.filter { $0.message.text.contains(searchingText) }
+        let ret = NotificationPage(data: filterResult)
         
+        completion(.success(ret))
     }
 }
 

@@ -49,7 +49,7 @@ class NotificationRepositoryTest: XCTestCase {
         // given
         let expectation = expectation(description: "Notifaction page has at least one notification ")
         expectation.expectedFulfillmentCount = 1
-        let query = NotificationQuery(text: "Thich")
+        let query = NotificationQuery(text: "Tin nội bộ")
         
         // when
         sut.fetchNotificationByQuery(query) { [weak self] result in
