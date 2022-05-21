@@ -33,31 +33,50 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     
     typealias Dependency = NotificationsUseCase
     private let useCase: NotificationsUseCase
-
+    
     // MARK: Output
     var notifications: Driver<[NotificationItemViewModel]> = .empty()
-
+    
     init(with useCase: Dependency) {
         self.useCase = useCase
+        let subject1 =
+            Observable.merge(
+                viewDidLoadProperty.asObservable(),
+                viewWillAppearProperty.asObservable().skip(1)
+            )
+            .flatMapLatest { () -> Observable<[NotificationItemViewModel]> in
+               return useCase.notifications()
+                    .map({ result -> [Notification] in
+                        switch result {
+                        case .success(let notifications):
+                            return notifications
+                        case .failure(_):
+                            return []
+                        }
+                    })
+                    .map { $0.map(NotificationItemViewModel.init) }
+            }
+        let subject2 =
+            didSearchProperty
+            .flatMapLatest { text -> Observable<[NotificationItemViewModel]> in
+                let query = NotificationQuery(text: text)
+                return useCase.notificationsByQuery(query)
+                    .map({ result -> [Notification] in
+                        switch result {
+                        case .success(let notifications):
+                            return notifications
+                        case .failure(_):
+                            return []
+                        }
+                    })
+                    .map { $0.map(NotificationItemViewModel.init) }
+            }
+        
         self.notifications =
-                Observable.merge(
-                    viewDidLoadProperty.asObservable(),
-                    viewWillAppearProperty.asObservable().skip(1),
-                    didSearchProperty.asObservable()
-                )
-                .flatMapLatest {
-                   return useCase.notifications()
-                        .map({ result -> [Notification] in
-                            switch result {
-                            case .success(let notifications):
-                                return notifications
-                            case .failure(_):
-                                return []
-                            }
-                        })
-                        .map { $0.map(NotificationItemViewModel.init) }
-                }
-                .asDriver(onErrorJustReturn: [])
+            Driver.merge(
+                subject1.asDriver(onErrorJustReturn: []),
+                subject2.asDriver(onErrorJustReturn: [])
+            )
     }
     
     private let viewDidLoadProperty = PublishSubject<Void>()
@@ -70,13 +89,13 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
         viewWillAppearProperty.onNext(())
     }
     
-    func didSelectItem(at index: Int) {
-        
+    private let didSearchProperty = PublishSubject<String>()
+    func didSearch(query: String) {
+        didSearchProperty.onNext(query)
     }
     
-    private let didSearchProperty = PublishSubject<Void>()
-    func didSearch(query: String) {
-        didSearchProperty.onNext(())
+    func didSelectItem(at index: Int) {
+        
     }
     
     func didCancelSearch() {

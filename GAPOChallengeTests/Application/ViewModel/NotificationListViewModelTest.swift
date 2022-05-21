@@ -82,13 +82,14 @@ class NotificationListViewModelTest: XCTestCase {
         // given
         let expectation = expectation(description: "Search items with valid query")
         expectation.expectedFulfillmentCount = 1
-        let query = "Chu Duc Minh"
+        let query = "Chu Đức Minh"
         
         // when
         sut.inputs.didSearch(query: query)
+        expectation.fulfill()
         
         // then
-        waitForExpectations(timeout: 1.0)
+        waitForExpectations(timeout: 3.0)
         XCTAssertTrue((notifications.value.count > 0))
     }
     
