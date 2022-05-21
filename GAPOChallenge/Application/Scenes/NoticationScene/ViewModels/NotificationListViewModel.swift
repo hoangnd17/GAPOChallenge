@@ -32,10 +32,13 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     var inputs: NotificationListViewModelInput { return self }
     var outputs: NotificationListViewModelOutput { return self }
     
+    //MARK: Dependencies
+    
     typealias Dependency = NotificationsUseCase
     private let useCase: NotificationsUseCase
     
     // MARK: Output
+    
     let notifications: Driver<[NotificationItemViewModel]>
     
     init(with useCase: Dependency) {

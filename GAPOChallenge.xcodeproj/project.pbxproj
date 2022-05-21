@@ -119,15 +119,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		FA0B49782835EB7000623018 /* Presentation */ = {
+		FA0B49782835EB7000623018 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				FA0B497C2835EDEA00623018 /* NoticationScene */,
+				FA0B49792835EB8C00623018 /* App */,
+				FAE1D9A428399AB7005957FC /* Scenes */,
 			);
-			path = Presentation;
+			path = Application;
 			sourceTree = "<group>";
 		};
-		FA0B49792835EB8C00623018 /* Application */ = {
+		FA0B49792835EB8C00623018 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				FA0B497A2835EC7000623018 /* AppCoordinator.swift */,
@@ -136,7 +137,7 @@
 				FA54A1702835E86900043D3D /* LaunchScreen.storyboard */,
 				FA54A1732835E86900043D3D /* Info.plist */,
 			);
-			path = Application;
+			path = App;
 			sourceTree = "<group>";
 		};
 		FA0B497C2835EDEA00623018 /* NoticationScene */ = {
@@ -287,8 +288,7 @@
 		FA54A1642835E86700043D3D /* GAPOChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				FA0B49792835EB8C00623018 /* Application */,
-				FA0B49782835EB7000623018 /* Presentation */,
+				FA0B49782835EB7000623018 /* Application */,
 				FA0B4985283704A500623018 /* Domain */,
 				FA0B4986283704B100623018 /* Data */,
 				FA0B497D2835EE3100623018 /* Resources */,
@@ -303,6 +303,14 @@
 				FA0B499C28378C1F00623018 /* Domain */,
 			);
 			path = GAPOChallengeTests;
+			sourceTree = "<group>";
+		};
+		FAE1D9A428399AB7005957FC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B497C2835EDEA00623018 /* NoticationScene */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -650,7 +658,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GAPOChallenge/Application/Info.plist;
+				INFOPLIST_FILE = GAPOChallenge/Application/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -677,7 +685,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GAPOChallenge/Application/Info.plist;
+				INFOPLIST_FILE = GAPOChallenge/Application/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
