@@ -140,13 +140,13 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		FA0B497C2835EDEA00623018 /* NoticationScene */ = {
+		FA0B497C2835EDEA00623018 /* Notication */ = {
 			isa = PBXGroup;
 			children = (
 				FA0B49832837045500623018 /* Views */,
 				FA0B49842837045C00623018 /* ViewModels */,
 			);
-			path = NoticationScene;
+			path = Notication;
 			sourceTree = "<group>";
 		};
 		FA0B497D2835EE3100623018 /* Resources */ = {
@@ -308,7 +308,7 @@
 		FAE1D9A428399AB7005957FC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				FA0B497C2835EDEA00623018 /* NoticationScene */,
+				FA0B497C2835EDEA00623018 /* Notication */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
