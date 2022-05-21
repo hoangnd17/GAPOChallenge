@@ -18,7 +18,7 @@ protocol NotificationListViewModelInput {
 }
 
 protocol NotificationListViewModelOutput {
-    var reloadData: Driver<[NotificationItemViewModel]> { get }
+    var notifications: Driver<[NotificationItemViewModel]> { get }
 }
 
 protocol NotificationListViewModel: NotificationListViewModelInput, NotificationListViewModelOutput {
@@ -35,14 +35,15 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     private let useCase: NotificationsUseCase
 
     // MARK: Output
-    var reloadData: Driver<[NotificationItemViewModel]> = .empty()
+    var notifications: Driver<[NotificationItemViewModel]> = .empty()
 
     init(with useCase: Dependency) {
         self.useCase = useCase
-        self.reloadData =
+        self.notifications =
                 Observable.merge(
                     viewDidLoadProperty.asObservable(),
-                    viewWillAppearProperty.asObservable().skip(1)
+                    viewWillAppearProperty.asObservable().skip(1),
+                    didSearchProperty.asObservable()
                 )
                 .flatMapLatest {
                    return useCase.notifications()
@@ -73,8 +74,9 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
         
     }
     
+    private let didSearchProperty = PublishSubject<Void>()
     func didSearch(query: String) {
-        
+        didSearchProperty.onNext(())
     }
     
     func didCancelSearch() {

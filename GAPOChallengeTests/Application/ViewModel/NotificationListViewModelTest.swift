@@ -14,7 +14,7 @@ class NotificationListViewModelTest: XCTestCase {
     private var useCase: NotificationsUseCase!
     private var repository: NotificationRepository!
     private var sut: NotificationListViewModel!
-    private let reloadDataWithNotifications = BehaviorRelay<[NotificationItemViewModel]>(value: [])
+    private let notifications = BehaviorRelay<[NotificationItemViewModel]>(value: [])
     private let bag = DisposeBag()
     
     override func setUp() {
@@ -22,7 +22,7 @@ class NotificationListViewModelTest: XCTestCase {
         repository = MockNotificationRepository()
         useCase = MockNotificationsUseCase(repository: repository)
         sut = DefaultNotificationListViewModel(with: useCase)
-        sut.reloadData.asObservable().bind(to: reloadDataWithNotifications).disposed(by: bag)
+        sut.outputs.notifications.asObservable().bind(to: notifications).disposed(by: bag)
     }
     
     override func tearDown() {
@@ -44,12 +44,12 @@ class NotificationListViewModelTest: XCTestCase {
 
         // then
         waitForExpectations(timeout: 3.0)
-        XCTAssertTrue((reloadDataWithNotifications.value.count > 0))
+        XCTAssertTrue((notifications.value.count > 0))
     }
     
     func test_fetchItemsWhenViewWillAppearIWasCalledFirstTime_thenHasEmptyNotifications() {
         // given
-        let expectation = expectation(description: "Fetch items when view didload")
+        let expectation = expectation(description: "Fetch items when view will appear")
         expectation.expectedFulfillmentCount = 1
         
         // when
@@ -58,12 +58,12 @@ class NotificationListViewModelTest: XCTestCase {
 
         // then
         waitForExpectations(timeout: 3.0)
-        XCTAssertTrue((reloadDataWithNotifications.value.count == 0))
+        XCTAssertTrue((notifications.value.count == 0))
     }
     
     func test_fetchItemsWhenViewWillAppearIWasCalledSecondTime_thenHasNotifications() {
         // given
-        let expectation = expectation(description: "Fetch items when view didload")
+        let expectation = expectation(description: "Fetch items when viewWillAppear was called the second time")
         expectation.expectedFulfillmentCount = 2
         
         // when
@@ -75,7 +75,21 @@ class NotificationListViewModelTest: XCTestCase {
 
         // then
         waitForExpectations(timeout: 3.0)
-        XCTAssertTrue((reloadDataWithNotifications.value.count > 0))
+        XCTAssertTrue((notifications.value.count > 0))
+    }
+    
+    func test_searchItemsByQuery_thenHasAtLeastOneItems_ifQueryIsValid() {
+        // given
+        let expectation = expectation(description: "Search items with valid query")
+        expectation.expectedFulfillmentCount = 1
+        let query = "Chu Duc Minh"
+        
+        // when
+        sut.inputs.didSearch(query: query)
+        
+        // then
+        waitForExpectations(timeout: 1.0)
+        XCTAssertTrue((notifications.value.count > 0))
     }
     
 }
