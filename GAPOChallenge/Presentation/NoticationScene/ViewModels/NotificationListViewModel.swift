@@ -17,26 +17,42 @@ protocol NotificationListViewModelInput {
 }
 
 protocol NotificationListViewModelOutput {
-    var items: Driver<[NotificationItemViewModel]> { get }
+    var reloadData: Driver<[NotificationItemViewModel]> { get }
 }
 
-protocol NotificationListViewModel: NotificationListViewModelInput, NotificationListViewModelOutput { }
+protocol NotificationListViewModel: NotificationListViewModelInput, NotificationListViewModelOutput {
+    var inputs: NotificationListViewModelInput { get }
+    var outputs: NotificationListViewModelOutput { get }
+}
 
 final class DefaultNotificationListViewModel: NotificationListViewModel {
     
+    var inputs: NotificationListViewModelInput { return self }
+    var outputs: NotificationListViewModelOutput { return self }
     private let useCase: FetchListNoficationUseCase
 
     // MARK: Output
-    var items: Driver<[NotificationItemViewModel]> = .empty()
+    var reloadData: Driver<[NotificationItemViewModel]> = .empty()
 
     typealias Dependency = FetchListNoficationUseCase
     
     init(with useCase: Dependency) {
         self.useCase = useCase
+        self.reloadData = useCase.execute()
+            .map({ result -> [Notification] in
+                switch result {
+                case .success(let notifications):
+                    return notifications
+                case .failure(_):
+                    return []
+                }
+            })
+            .map { $0.map(NotificationItemViewModel.init) }
+            .asDriver(onErrorJustReturn: [])
     }
     
     private func loadItems() {
-       items = useCase.execute()
+        reloadData = useCase.execute()
             .map({ result -> [Notification] in
                 switch result {
                 case .success(let notifications):

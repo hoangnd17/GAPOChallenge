@@ -38,8 +38,8 @@ class NotificationListViewModelTest: XCTestCase {
         expectation.expectedFulfillmentCount = 1
         
         // when
-        sut.viewDidLoad()
-        sut.items
+        sut.inputs.viewDidLoad()
+        sut.outputs.reloadData
             .drive(reloadDataWithNotifications)
             .disposed(by: bag)
         
