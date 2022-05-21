@@ -43,8 +43,7 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
         let initial =
             Observable.merge(
                 viewDidLoadProperty.asObservable(),
-                viewWillAppearProperty.asObservable().skip(1),
-                didCancelSearchProperty.asObservable()
+                viewWillAppearProperty.asObservable().skip(1)
             )
             .flatMapLatest { () -> Observable<[NotificationItemViewModel]> in
                return useCase.notifications()
@@ -76,11 +75,14 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
         
         let startSearch = didBeginSearchProperty.map { [NotificationItemViewModel]() }
         
+        let didCancelSearch = didCancelSearchProperty.withLatestFrom(initial)
+        
         self.notifications =
             Driver.merge(
                 initial.asDriver(onErrorJustReturn: []),
                 didSearch.asDriver(onErrorJustReturn: []),
-                startSearch.asDriver(onErrorJustReturn: [])
+                startSearch.asDriver(onErrorJustReturn: []),
+                didCancelSearch.asDriver(onErrorJustReturn: [])
             )
     }
     
