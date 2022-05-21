@@ -11,6 +11,7 @@ import RxCocoa
 
 protocol NotificationListViewModelInput {
     func viewDidLoad()
+    func viewWillAppear()
     func didSelectItem(at index: Int)
     func didSearch(query: String)
     func didCancelSearch()
@@ -29,7 +30,9 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     
     var inputs: NotificationListViewModelInput { return self }
     var outputs: NotificationListViewModelOutput { return self }
+    
     private let useCase: FetchListNoficationUseCase
+    private let viewDidLoadProperty = PublishSubject<Void>()
 
     // MARK: Output
     var reloadData: Driver<[NotificationItemViewModel]> = .empty()
@@ -38,16 +41,19 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     
     init(with useCase: Dependency) {
         self.useCase = useCase
-        self.reloadData = useCase.execute()
-            .map({ result -> [Notification] in
-                switch result {
-                case .success(let notifications):
-                    return notifications
-                case .failure(_):
-                    return []
-                }
-            })
-            .map { $0.map(NotificationItemViewModel.init) }
+        self.reloadData = viewDidLoadProperty
+            .flatMapLatest {
+               return useCase.execute()
+                    .map({ result -> [Notification] in
+                        switch result {
+                        case .success(let notifications):
+                            return notifications
+                        case .failure(_):
+                            return []
+                        }
+                    })
+                    .map { $0.map(NotificationItemViewModel.init) }
+            }
             .asDriver(onErrorJustReturn: [])
     }
     
@@ -70,6 +76,10 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
 extension DefaultNotificationListViewModel {
     
     func viewDidLoad() {
+        viewDidLoadProperty.onNext(())
+    }
+    
+    func viewWillAppear() {
         loadItems()
     }
     

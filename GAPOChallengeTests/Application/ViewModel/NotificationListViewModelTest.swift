@@ -22,6 +22,7 @@ class NotificationListViewModelTest: XCTestCase {
         repository = MockNotificationRepository()
         useCase = DefaultFetchListNoficationUseCase(repository: repository)
         sut = DefaultNotificationListViewModel(with: useCase)
+        sut.reloadData.asObservable().bind(to: reloadDataWithNotifications).disposed(by: bag)
     }
     
     override func tearDown() {
@@ -39,10 +40,6 @@ class NotificationListViewModelTest: XCTestCase {
         
         // when
         sut.inputs.viewDidLoad()
-        sut.outputs.reloadData
-            .drive(reloadDataWithNotifications)
-            .disposed(by: bag)
-        
         expectation.fulfill()
 
         // then
