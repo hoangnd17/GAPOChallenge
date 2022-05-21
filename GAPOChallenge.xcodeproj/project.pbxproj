@@ -34,6 +34,7 @@
 		FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1692835E86700043D3D /* NotificationListViewController.swift */; };
 		FA54A16F2835E86900043D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA54A16E2835E86900043D3D /* Assets.xcassets */; };
 		FA54A1722835E86900043D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA54A1702835E86900043D3D /* LaunchScreen.storyboard */; };
+		FAE1D9A628399BC4005957FC /* NotificationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE1D9A528399BC4005957FC /* NotificationListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		FA54A1712835E86900043D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA54A1732835E86900043D3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA54A1782835E86A00043D3D /* GAPOChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAPOChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE1D9A528399BC4005957FC /* NotificationListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,13 +142,13 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		FA0B497C2835EDEA00623018 /* Notication */ = {
+		FA0B497C2835EDEA00623018 /* NoticationList */ = {
 			isa = PBXGroup;
 			children = (
 				FA0B49832837045500623018 /* Views */,
 				FA0B49842837045C00623018 /* ViewModels */,
 			);
-			path = Notication;
+			path = NoticationList;
 			sourceTree = "<group>";
 		};
 		FA0B497D2835EE3100623018 /* Resources */ = {
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				FA54A1692835E86700043D3D /* NotificationListViewController.swift */,
+				FAE1D9A528399BC4005957FC /* NotificationListViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,7 +311,7 @@
 		FAE1D9A428399AB7005957FC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				FA0B497C2835EDEA00623018 /* Notication */,
+				FA0B497C2835EDEA00623018 /* NoticationList */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA54A1722835E86900043D3D /* LaunchScreen.storyboard in Resources */,
+				FAE1D9A628399BC4005957FC /* NotificationListViewController.xib in Resources */,
 				FA54A16F2835E86900043D3D /* Assets.xcassets in Resources */,
 				FA0B497F2836FEF500623018 /* mock.json in Resources */,
 			);
