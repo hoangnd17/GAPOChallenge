@@ -31,15 +31,12 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     var inputs: NotificationListViewModelInput { return self }
     var outputs: NotificationListViewModelOutput { return self }
     
+    typealias Dependency = FetchListNoficationUseCase
     private let useCase: FetchListNoficationUseCase
-    private let viewDidLoadProperty = PublishSubject<Void>()
-    private let viewWillAppearProperty = PublishSubject<Void>()
 
     // MARK: Output
     var reloadData: Driver<[NotificationItemViewModel]> = .empty()
 
-    typealias Dependency = FetchListNoficationUseCase
-    
     init(with useCase: Dependency) {
         self.useCase = useCase
         self.reloadData =
@@ -62,28 +59,12 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
                 .asDriver(onErrorJustReturn: [])
     }
     
-    private func loadItems() {
-        reloadData = useCase.execute()
-            .map({ result -> [Notification] in
-                switch result {
-                case .success(let notifications):
-                    return notifications
-                case .failure(_):
-                    return []
-                }
-            })
-            .map { $0.map(NotificationItemViewModel.init) }
-            .asDriver(onErrorJustReturn: [])
-    }
-    
-}
-
-extension DefaultNotificationListViewModel {
-    
+    private let viewDidLoadProperty = PublishSubject<Void>()
     func viewDidLoad() {
         viewDidLoadProperty.onNext(())
     }
     
+    private let viewWillAppearProperty = PublishSubject<Void>()
     func viewWillAppear() {
         viewWillAppearProperty.onNext(())
     }
