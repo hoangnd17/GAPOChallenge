@@ -10,7 +10,7 @@ import RxSwift
 
 typealias NotificationListValue = Result<[Notification], Error>
 protocol NotificationsUseCase {
-    func execute() -> Observable<NotificationListValue>
+    func notifications() -> Observable<NotificationListValue>
 }
 
 final class MockNotificationsUseCase: NotificationsUseCase {
@@ -21,7 +21,7 @@ final class MockNotificationsUseCase: NotificationsUseCase {
         self.repository = repository
     }
     
-    func execute() -> Observable<NotificationListValue> {
+    func notifications() -> Observable<NotificationListValue> {
         return Observable<NotificationListValue>.create { observer in
             
             self.repository.fetchNotifications { result in

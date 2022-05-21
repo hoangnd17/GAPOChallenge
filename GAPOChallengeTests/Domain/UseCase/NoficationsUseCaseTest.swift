@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 class NoficationsUseCaseTest: XCTestCase {
-
+    
     private var repository: NotificationRepository!
     private var notifications: [Notification]!
     private var sut: NotificationsUseCase!
@@ -31,14 +31,14 @@ class NoficationsUseCaseTest: XCTestCase {
         bag = nil
         super.tearDown()
     }
-
+    
     func testExecute_hasAtLeastOneNotification() {
         // given
         let expectation = expectation(description: "Notifaction page has at least one notification ")
         expectation.expectedFulfillmentCount = 1
         
         // when
-        sut.execute()
+        sut.notifications()
             .subscribe(onNext: { [weak self] result in
                 switch result {
                 case .success(let notificatons):

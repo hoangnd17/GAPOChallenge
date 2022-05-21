@@ -45,7 +45,7 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
                     viewWillAppearProperty.asObservable().skip(1)
                 )
                 .flatMapLatest {
-                   return useCase.execute()
+                   return useCase.notifications()
                         .map({ result -> [Notification] in
                             switch result {
                             case .success(let notifications):
