@@ -93,4 +93,20 @@ class NotificationListViewModelTest: XCTestCase {
         XCTAssertTrue((notifications.value.count > 0))
     }
     
+    
+    func test_searchItemsByQuery_thenHasAtLeastOneItems_ifQueryIsInvalid() {
+        // given
+        let expectation = expectation(description: "Search items with valid query")
+        expectation.expectedFulfillmentCount = 1
+        let query = "Khong Ton Tai"
+        
+        // when
+        sut.inputs.didSearch(query: query)
+        expectation.fulfill()
+        
+        // then
+        waitForExpectations(timeout: 3.0)
+        XCTAssertTrue((notifications.value.count == 0))
+    }
+    
 }
