@@ -93,6 +93,41 @@ class NotificationListViewModelTest: XCTestCase {
         XCTAssertTrue((notifications.value.count > 0))
     }
     
+    func test_WhenBeginSearch_thenShowEmptyItemList() {
+        // given
+        let expectation = expectation(description: "Show empty list when begin search ")
+        expectation.expectedFulfillmentCount = 2
+        
+        // when
+        sut.inputs.viewDidLoad()
+        expectation.fulfill()
+        
+        sut.inputs.didBeginSearch()
+        expectation.fulfill()
+        // then
+        waitForExpectations(timeout: 3.0)
+        XCTAssertTrue((notifications.value.count == 0))
+    }
+    
+    func test_WhenBeginSearch_thenCancelSearch_thenShowTheInitialList() {
+        // given
+        let expectation = expectation(description: "Show the initial list")
+        expectation.expectedFulfillmentCount = 3
+
+        // when
+        sut.inputs.viewDidLoad()
+        expectation.fulfill()
+
+        sut.inputs.didBeginSearch()
+        expectation.fulfill()
+        
+        sut.inputs.didCancelSearch()
+        expectation.fulfill()
+
+        // then
+        waitForExpectations(timeout: 5.0)
+        XCTAssertTrue((notifications.value.count > 0))
+    }
     
     func test_searchItemsByQuery_thenHasAtLeastOneItems_ifQueryIsInvalid() {
         // given

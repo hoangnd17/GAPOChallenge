@@ -13,6 +13,7 @@ protocol NotificationListViewModelInput {
     func viewDidLoad()
     func viewWillAppear()
     func didSelectItem(at index: Int)
+    func didBeginSearch()
     func didSearch(query: String)
     func didCancelSearch()
 }
@@ -39,10 +40,11 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     
     init(with useCase: Dependency) {
         self.useCase = useCase
-        let subject1 =
+        let initial =
             Observable.merge(
                 viewDidLoadProperty.asObservable(),
-                viewWillAppearProperty.asObservable().skip(1)
+                viewWillAppearProperty.asObservable().skip(1),
+                didCancelSearchProperty.asObservable()
             )
             .flatMapLatest { () -> Observable<[NotificationItemViewModel]> in
                return useCase.notifications()
@@ -56,8 +58,8 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
                     })
                     .map { $0.map(NotificationItemViewModel.init) }
             }
-        let subject2 =
-            didSearchProperty
+        let didSearch =
+            didSearchWithQueryProperty
             .flatMapLatest { text -> Observable<[NotificationItemViewModel]> in
                 let query = NotificationQuery(text: text)
                 return useCase.notificationsByQuery(query)
@@ -72,10 +74,13 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
                     .map { $0.map(NotificationItemViewModel.init) }
             }
         
+        let startSearch = didBeginSearchProperty.map { [NotificationItemViewModel]() }
+        
         self.notifications =
             Driver.merge(
-                subject1.asDriver(onErrorJustReturn: []),
-                subject2.asDriver(onErrorJustReturn: [])
+                initial.asDriver(onErrorJustReturn: []),
+                didSearch.asDriver(onErrorJustReturn: []),
+                startSearch.asDriver(onErrorJustReturn: [])
             )
     }
     
@@ -89,16 +94,22 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
         viewWillAppearProperty.onNext(())
     }
     
-    private let didSearchProperty = PublishSubject<String>()
+    private let didBeginSearchProperty = PublishSubject<Void>()
+    func didBeginSearch() {
+        didBeginSearchProperty.onNext(())
+    }
+    
+    private let didSearchWithQueryProperty = PublishSubject<String>()
     func didSearch(query: String) {
-        didSearchProperty.onNext(query)
+        didSearchWithQueryProperty.onNext(query)
+    }
+    
+    private let didCancelSearchProperty = PublishSubject<Void>()
+    func didCancelSearch() {
+        didCancelSearchProperty.onNext(())
     }
     
     func didSelectItem(at index: Int) {
-        
-    }
-    
-    func didCancelSearch() {
         
     }
 }
