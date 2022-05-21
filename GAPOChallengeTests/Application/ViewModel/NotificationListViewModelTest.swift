@@ -11,7 +11,7 @@ import RxCocoa
 
 class NotificationListViewModelTest: XCTestCase {
 
-    private var useCase: FetchNoficationListUseCase!
+    private var useCase: NotificationsUseCase!
     private var repository: NotificationRepository!
     private var sut: NotificationListViewModel!
     private let reloadDataWithNotifications = BehaviorRelay<[NotificationItemViewModel]>(value: [])
@@ -20,7 +20,7 @@ class NotificationListViewModelTest: XCTestCase {
     override func setUp() {
         super.setUp()
         repository = MockNotificationRepository()
-        useCase = DefaultFetchListNoficationUseCase(repository: repository)
+        useCase = MockNotificationsUseCase(repository: repository)
         sut = DefaultNotificationListViewModel(with: useCase)
         sut.reloadData.asObservable().bind(to: reloadDataWithNotifications).disposed(by: bag)
     }

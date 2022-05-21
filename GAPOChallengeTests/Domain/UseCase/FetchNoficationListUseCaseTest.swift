@@ -13,14 +13,14 @@ class FetchNoficationListUseCaseTest: XCTestCase {
 
     private var repository: NotificationRepository!
     private var notifications: [Notification]!
-    private var sut: FetchNoficationListUseCase!
+    private var sut: NotificationsUseCase!
     private var bag: DisposeBag!
     
     override func setUp() {
         super.setUp()
         repository = MockNotificationRepository()
         notifications = []
-        sut = DefaultFetchListNoficationUseCase(repository: repository)
+        sut = MockNotificationsUseCase(repository: repository)
         bag = DisposeBag()
     }
     

@@ -1,5 +1,5 @@
 //
-//  FetchListNotificationUseCase.swift
+//  NotificationsUseCase.swift
 //  GAPOChallenge
 //
 //  Created by Nguyen Dinh Hoang on 5/20/22.
@@ -9,11 +9,11 @@ import Foundation
 import RxSwift
 
 typealias NotificationListValue = Result<[Notification], Error>
-protocol FetchNoficationListUseCase {
+protocol NotificationsUseCase {
     func execute() -> Observable<NotificationListValue>
 }
 
-final class DefaultFetchListNoficationUseCase: FetchNoficationListUseCase {
+final class MockNotificationsUseCase: NotificationsUseCase {
     
     private let repository: NotificationRepository
     
