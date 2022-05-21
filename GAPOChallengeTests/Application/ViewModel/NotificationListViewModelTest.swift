@@ -33,7 +33,7 @@ class NotificationListViewModelTest: XCTestCase {
     }
 
     
-    func test_fetchItemsWhenViewDidLoad() {
+    func test_fetchItemsWhenViewDidLoad_thenHasNotifications() {
         // given
         let expectation = expectation(description: "Fetch items when view didload")
         expectation.expectedFulfillmentCount = 1
@@ -46,4 +46,36 @@ class NotificationListViewModelTest: XCTestCase {
         waitForExpectations(timeout: 3.0)
         XCTAssertTrue((reloadDataWithNotifications.value.count > 0))
     }
+    
+    func test_fetchItemsWhenViewWillAppearIWasCalledFirstTime_thenHasEmptyNotifications() {
+        // given
+        let expectation = expectation(description: "Fetch items when view didload")
+        expectation.expectedFulfillmentCount = 1
+        
+        // when
+        sut.inputs.viewWillAppear()
+        expectation.fulfill()
+
+        // then
+        waitForExpectations(timeout: 3.0)
+        XCTAssertTrue((reloadDataWithNotifications.value.count == 0))
+    }
+    
+    func test_fetchItemsWhenViewWillAppearIWasCalledSecondTime_thenHasNotifications() {
+        // given
+        let expectation = expectation(description: "Fetch items when view didload")
+        expectation.expectedFulfillmentCount = 2
+        
+        // when
+        sut.inputs.viewWillAppear()
+        expectation.fulfill()
+        
+        sut.inputs.viewWillAppear()
+        expectation.fulfill()
+
+        // then
+        waitForExpectations(timeout: 3.0)
+        XCTAssertTrue((reloadDataWithNotifications.value.count > 0))
+    }
+    
 }

@@ -33,6 +33,7 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     
     private let useCase: FetchListNoficationUseCase
     private let viewDidLoadProperty = PublishSubject<Void>()
+    private let viewWillAppearProperty = PublishSubject<Void>()
 
     // MARK: Output
     var reloadData: Driver<[NotificationItemViewModel]> = .empty()
@@ -41,20 +42,24 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     
     init(with useCase: Dependency) {
         self.useCase = useCase
-        self.reloadData = viewDidLoadProperty
-            .flatMapLatest {
-               return useCase.execute()
-                    .map({ result -> [Notification] in
-                        switch result {
-                        case .success(let notifications):
-                            return notifications
-                        case .failure(_):
-                            return []
-                        }
-                    })
-                    .map { $0.map(NotificationItemViewModel.init) }
-            }
-            .asDriver(onErrorJustReturn: [])
+        self.reloadData =
+                Observable.merge(
+                    viewDidLoadProperty.asObservable(),
+                    viewWillAppearProperty.asObservable().skip(1)
+                )
+                .flatMapLatest {
+                   return useCase.execute()
+                        .map({ result -> [Notification] in
+                            switch result {
+                            case .success(let notifications):
+                                return notifications
+                            case .failure(_):
+                                return []
+                            }
+                        })
+                        .map { $0.map(NotificationItemViewModel.init) }
+                }
+                .asDriver(onErrorJustReturn: [])
     }
     
     private func loadItems() {
@@ -80,7 +85,7 @@ extension DefaultNotificationListViewModel {
     }
     
     func viewWillAppear() {
-        loadItems()
+        viewWillAppearProperty.onNext(())
     }
     
     func didSelectItem(at index: Int) {
