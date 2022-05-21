@@ -36,7 +36,7 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     private let useCase: NotificationsUseCase
     
     // MARK: Output
-    var notifications: Driver<[NotificationItemViewModel]> = .empty()
+    let notifications: Driver<[NotificationItemViewModel]>
     
     init(with useCase: Dependency) {
         self.useCase = useCase
