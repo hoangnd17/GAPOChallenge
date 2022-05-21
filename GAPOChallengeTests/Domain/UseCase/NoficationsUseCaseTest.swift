@@ -32,7 +32,7 @@ class NoficationsUseCaseTest: XCTestCase {
         super.tearDown()
     }
     
-    func testExecute_hasAtLeastOneNotification() {
+    func testGetNotifications_hasAtLeastOneItem() {
         // given
         let expectation = expectation(description: "Notifaction page has at least one notification ")
         expectation.expectedFulfillmentCount = 1
@@ -53,6 +53,54 @@ class NoficationsUseCaseTest: XCTestCase {
         // then
         waitForExpectations(timeout: 3.0)
         XCTAssertTrue(notifications.count > 0)
+    }
+    
+    func testGetNotificationsByQuey_hasAtLeastOneItem_ifQueryIsValid() {
+        // given
+        let expectation = expectation(description: "Notification page has at least one notification ")
+        expectation.expectedFulfillmentCount = 1
+        let query = NotificationQuery(text: "Chu Đức Minh")
+        
+        // when
+        sut.notificationsByQuery(query)
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(let notifications):
+                    self?.notifications = notifications
+                case .failure(_):
+                    break
+                }
+                expectation.fulfill()
+            })
+            .disposed(by: bag)
+        
+        // then
+        waitForExpectations(timeout: 3.0)
+        XCTAssertTrue(notifications.count > 0)
+    }
+    
+    func testGetNotificationsByQuey_hasAtNoItems_ifQueryIsInvalid() {
+        // given
+        let expectation = expectation(description: "Notification page has at least one notification ")
+        expectation.expectedFulfillmentCount = 1
+        let query = NotificationQuery(text: "Khong ton tai")
+        
+        // when
+        sut.notificationsByQuery(query)
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(let notifications):
+                    self?.notifications = notifications
+                case .failure(_):
+                    break
+                }
+                expectation.fulfill()
+            })
+            .disposed(by: bag)
+        
+        // then
+        waitForExpectations(timeout: 3.0)
+        XCTAssertTrue(notifications.count == 0)
     }
     
 }

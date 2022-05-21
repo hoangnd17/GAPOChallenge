@@ -11,6 +11,7 @@ import RxSwift
 typealias NotificationListValue = Result<[Notification], Error>
 protocol NotificationsUseCase {
     func notifications() -> Observable<NotificationListValue>
+    func notificationsByQuery(_ query: NotificationQuery) -> Observable<NotificationListValue>
 }
 
 final class MockNotificationsUseCase: NotificationsUseCase {
@@ -35,5 +36,20 @@ final class MockNotificationsUseCase: NotificationsUseCase {
             
             return Disposables.create()
         }
+    }
+    
+    func notificationsByQuery(_ query: NotificationQuery) -> Observable<NotificationListValue> {
+        return Observable<NotificationListValue>.create { observer in
+            self.repository.searchNotificationsBy(query) { result in
+                switch result {
+                case .success(let page):
+                    observer.onNext(.success(page.data))
+                case .failure(let error):
+                    observer.onNext(.failure(error))
+                }
+            }
+            return Disposables.create()
+        }
+        
     }
 }
