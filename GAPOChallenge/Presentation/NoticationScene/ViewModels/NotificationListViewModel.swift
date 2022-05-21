@@ -31,8 +31,8 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     var inputs: NotificationListViewModelInput { return self }
     var outputs: NotificationListViewModelOutput { return self }
     
-    typealias Dependency = FetchListNoficationUseCase
-    private let useCase: FetchListNoficationUseCase
+    typealias Dependency = FetchNoficationListUseCase
+    private let useCase: FetchNoficationListUseCase
 
     // MARK: Output
     var reloadData: Driver<[NotificationItemViewModel]> = .empty()

@@ -11,7 +11,7 @@ import RxCocoa
 
 class NotificationListViewModelTest: XCTestCase {
 
-    private var useCase: FetchListNoficationUseCase!
+    private var useCase: FetchNoficationListUseCase!
     private var repository: NotificationRepository!
     private var sut: NotificationListViewModel!
     private let reloadDataWithNotifications = BehaviorRelay<[NotificationItemViewModel]>(value: [])

@@ -23,7 +23,7 @@
 		FA0B4998283784B900623018 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = FA0B497E2836FEF500623018 /* mock.json */; };
 		FA0B499A28378C0900623018 /* FetchListNotificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B499928378C0900623018 /* FetchListNotificationUseCase.swift */; };
 		FA0B499B28378C0D00623018 /* FetchListNotificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B499928378C0900623018 /* FetchListNotificationUseCase.swift */; };
-		FA0B499F28378C5F00623018 /* FetchListNoficationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B499E28378C5F00623018 /* FetchListNoficationUseCase.swift */; };
+		FA0B499F28378C5F00623018 /* FetchNoficationListUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B499E28378C5F00623018 /* FetchNoficationListUseCaseTest.swift */; };
 		FA0B49A42837E5A300623018 /* NotificationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49A32837E5A300623018 /* NotificationListViewModel.swift */; };
 		FA0B49A52837E5A300623018 /* NotificationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49A32837E5A300623018 /* NotificationListViewModel.swift */; };
 		FA0B49A72837E9F500623018 /* NotificationItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49A62837E9F500623018 /* NotificationItemViewModel.swift */; };
@@ -62,7 +62,7 @@
 		FA0B498C28370ADB00623018 /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
 		FA0B49952837739B00623018 /* NotificationRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepositoryTest.swift; sourceTree = "<group>"; };
 		FA0B499928378C0900623018 /* FetchListNotificationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListNotificationUseCase.swift; sourceTree = "<group>"; };
-		FA0B499E28378C5F00623018 /* FetchListNoficationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListNoficationUseCase.swift; sourceTree = "<group>"; };
+		FA0B499E28378C5F00623018 /* FetchNoficationListUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNoficationListUseCaseTest.swift; sourceTree = "<group>"; };
 		FA0B49A32837E5A300623018 /* NotificationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListViewModel.swift; sourceTree = "<group>"; };
 		FA0B49A62837E9F500623018 /* NotificationItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItemViewModel.swift; sourceTree = "<group>"; };
 		FA0B49A92837EAF200623018 /* NotificationListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListViewModelTest.swift; sourceTree = "<group>"; };
@@ -236,7 +236,7 @@
 		FA0B499D28378C3000623018 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				FA0B499E28378C5F00623018 /* FetchListNoficationUseCase.swift */,
+				FA0B499E28378C5F00623018 /* FetchNoficationListUseCaseTest.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -494,7 +494,7 @@
 				FA0B49942837736300623018 /* SceneDelegate.swift in Sources */,
 				FA0B498F2837734400623018 /* NotificationRepository.swift in Sources */,
 				FA0B49912837735700623018 /* NotificationListViewController.swift in Sources */,
-				FA0B499F28378C5F00623018 /* FetchListNoficationUseCase.swift in Sources */,
+				FA0B499F28378C5F00623018 /* FetchNoficationListUseCaseTest.swift in Sources */,
 				FA0B49962837739B00623018 /* NotificationRepositoryTest.swift in Sources */,
 				FA0B49A52837E5A300623018 /* NotificationListViewModel.swift in Sources */,
 				FA0B49922837735E00623018 /* AppCoordinator.swift in Sources */,

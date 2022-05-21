@@ -9,11 +9,11 @@ import Foundation
 import RxSwift
 
 typealias NotificationListValue = Result<[Notification], Error>
-protocol FetchListNoficationUseCase {
+protocol FetchNoficationListUseCase {
     func execute() -> Observable<NotificationListValue>
 }
 
-final class DefaultFetchListNoficationUseCase: FetchListNoficationUseCase {
+final class DefaultFetchListNoficationUseCase: FetchNoficationListUseCase {
     
     private let repository: NotificationRepository
     

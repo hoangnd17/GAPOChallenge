@@ -1,5 +1,5 @@
 //
-//  FetchListNoficationUseCaseTest.swift
+//  FetchNoficationListUseCaseTest.swift
 //  GAPOChallengeTests
 //
 //  Created by Nguyen Dinh Hoang on 5/20/22.
@@ -9,11 +9,11 @@ import XCTest
 import RxSwift
 import RxCocoa
 
-class FetchListNoficationUseCaseTest: XCTestCase {
+class FetchNoficationListUseCaseTest: XCTestCase {
 
     private var repository: NotificationRepository!
     private var notifications: [Notification]!
-    private var sut: FetchListNoficationUseCase!
+    private var sut: FetchNoficationListUseCase!
     private var bag: DisposeBag!
     
     override func setUp() {
