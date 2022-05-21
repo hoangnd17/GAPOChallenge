@@ -13,7 +13,19 @@ class NotificationListViewController: UIViewController {
     @IBOutlet private weak var searchBarContainer: UIView!
     
     private let searchController = UISearchController(searchResultsController: nil)
-
+    
+    typealias Factory = ViewModelFactory
+    private let viewModel: NotificationListViewModel!
+    
+    init(factory: Factory) {
+        self.viewModel = factory.makeNotificationListViewModel()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
