@@ -8,8 +8,8 @@
 import Foundation
 
 protocol NotificationRepository {
-    func fetchNotificationList(completion: @escaping (Result<NotificationPage, Error>) -> Void)
-    func fetchNotificationByQuery(_ query: NotificationQuery, completion: @escaping (Result<NotificationPage, Error>) -> Void)
+    func fetchNotifications(completion: @escaping (Result<NotificationPage, Error>) -> Void)
+    func searchNotificationsBy(_ query: NotificationQuery, completion: @escaping (Result<NotificationPage, Error>) -> Void)
 }
 
 struct MockNotificationRepository: NotificationRepository {
@@ -28,11 +28,11 @@ struct MockNotificationRepository: NotificationRepository {
         return noticationPage
     }()
     
-    func fetchNotificationList(completion: @escaping (Result<NotificationPage, Error>) -> Void) {
+    func fetchNotifications(completion: @escaping (Result<NotificationPage, Error>) -> Void) {
         completion(.success(MockNotificationRepository.page))
     }
     
-    func fetchNotificationByQuery(_ query: NotificationQuery, completion: @escaping (Result<NotificationPage, Error>) -> Void) {
+    func searchNotificationsBy(_ query: NotificationQuery, completion: @escaping (Result<NotificationPage, Error>) -> Void) {
         let searchingText = query.text
         let notifications = MockNotificationRepository.page.data
         let filterResult =

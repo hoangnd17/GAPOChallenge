@@ -24,13 +24,13 @@ class NotificationRepositoryTest: XCTestCase {
         super.tearDown()
     }
     
-    func testFetchNotificationList_hasAtLeastOneNotification() {
+    func testFetchNotifications_hasAtLeastOneItem() {
         // given
         let expectation = expectation(description: "Notifaction page has at least one notification ")
         expectation.expectedFulfillmentCount = 1
         
         // when
-        sut.fetchNotificationList { [weak self] result in
+        sut.fetchNotifications { [weak self] result in
             switch result {
             case .success(let page):
                 self?.result = page.data
@@ -45,14 +45,14 @@ class NotificationRepositoryTest: XCTestCase {
         XCTAssertTrue(result.count > 0)
     }
     
-    func testFetchNotificationByQuery_hasAtLeastOneNotification_IfQueryIsValid() {
+    func testSearchNotificationsByQuery_hasAtLeastOneItem_IfQueryIsValid() {
         // given
         let expectation = expectation(description: "Notifaction page has at least one notification ")
         expectation.expectedFulfillmentCount = 1
         let query = NotificationQuery(text: "Tin nội bộ")
         
         // when
-        sut.fetchNotificationByQuery(query) { [weak self] result in
+        sut.searchNotificationsBy(query) { [weak self] result in
             switch result {
             case .success(let page):
                 self?.result = page.data
@@ -67,14 +67,14 @@ class NotificationRepositoryTest: XCTestCase {
         XCTAssertTrue(result.count > 0)
     }
     
-    func testFetchNotificationByQuery_hasNoNotification_IfQueryIsInValid() {
+    func testSearchNotificationsByQuery_hasNoItems_IfQueryIsInValid() {
         // given
         let expectation = expectation(description: "Notifaction page has at least one notification ")
         expectation.expectedFulfillmentCount = 1
         let query = NotificationQuery(text: "Thích")
         
         // when
-        sut.fetchNotificationByQuery(query) { [weak self] result in
+        sut.searchNotificationsBy(query) { [weak self] result in
             switch result {
             case .success(let page):
                 self?.result = page.data

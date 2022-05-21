@@ -24,7 +24,7 @@ final class MockNotificationsUseCase: NotificationsUseCase {
     func execute() -> Observable<NotificationListValue> {
         return Observable<NotificationListValue>.create { observer in
             
-            self.repository.fetchNotificationList { result in
+            self.repository.fetchNotifications { result in
                 switch result {
                 case .success(let page):
                     observer.onNext(.success(page.data))
