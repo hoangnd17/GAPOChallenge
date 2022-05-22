@@ -49,17 +49,7 @@ class NotificationListViewController: UIViewController {
 
 }
 
-struct NotificationSectionData {
-    typealias Item = NotificationItemViewModel
-    var items: [NotificationItemViewModel]
-}
 
-extension NotificationSectionData: SectionModelType {
-    init(original: NotificationSectionData, items: [NotificationItemViewModel]) {
-        self = original
-        self.items = items
-    }
-}
 
 extension NotificationListViewController {
     private func setupTableView() {
