@@ -6,6 +6,9 @@ pod 'RxSwift'
 pod 'RxCocoa'
 pod 'RxDataSources'
 
+#Others
+pod 'Kingfisher'
+
 target 'GAPOChallenge' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!

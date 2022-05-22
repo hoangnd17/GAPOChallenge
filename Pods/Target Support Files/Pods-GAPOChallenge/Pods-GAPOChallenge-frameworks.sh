@@ -177,6 +177,7 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator-framework/Differentiator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher-framework/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa-framework/RxCocoa.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxDataSources-framework/RxDataSources.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxRelay-framework/RxRelay.framework"
@@ -184,6 +185,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator-framework/Differentiator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher-framework/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa-framework/RxCocoa.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxDataSources-framework/RxDataSources.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxRelay-framework/RxRelay.framework"

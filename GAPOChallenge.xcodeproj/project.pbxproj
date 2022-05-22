@@ -203,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				FA0B4987283704E400623018 /* Entities */,
-				FA0B498A2837062D00623018 /* Notification.swift */,
 				FA0B4988283704E900623018 /* UseCases */,
 				FA0B498E2837726F00623018 /* Repositories */,
 			);
@@ -213,8 +212,8 @@
 		FA0B4986283704B100623018 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				FAE1D9AC2839CC70005957FC /* Storages */,
-				FAE1D9AB2839CC69005957FC /* Network */,
+				FA2A3BC6283A2E4200369052 /* Storages */,
+				FA2A3BC5283A2E3C00369052 /* Network */,
 				FA0B49A0283794EB00623018 /* Mock */,
 			);
 			path = Data;
@@ -223,6 +222,7 @@
 		FA0B4987283704E400623018 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				FA0B498A2837062D00623018 /* Notification.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -292,6 +292,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FA2A3BC5283A2E3C00369052 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA2A3BC6283A2E4200369052 /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storages;
+			sourceTree = "<group>";
+		};
 		FA54A1592835E86700043D3D = {
 			isa = PBXGroup;
 			children = (
@@ -338,20 +352,6 @@
 				FA0B497C2835EDEA00623018 /* NoticationList */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		FAE1D9AB2839CC69005957FC /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		FAE1D9AC2839CC70005957FC /* Storages */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storages;
 			sourceTree = "<group>";
 		};
 		FAE1D9B02839D047005957FC /* Cells */ = {
