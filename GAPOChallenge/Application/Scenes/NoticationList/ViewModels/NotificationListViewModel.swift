@@ -34,15 +34,14 @@ final class DefaultNotificationListViewModel: NotificationListViewModel {
     
     //MARK: Dependencies
     
-    typealias Dependency = NotificationsUseCase
-    private let useCase: NotificationsUseCase
+    typealias Factory = UseCaseFactory
     
     // MARK: Output
     
     let notifications: Driver<[NotificationItemViewModel]>
     
-    init(with useCase: Dependency) {
-        self.useCase = useCase
+    init(factory: Factory) {
+        let useCase = factory.makeNotificationsUseCase()
         let initial =
             Observable.merge(
                 viewDidLoadProperty.asObservable(),

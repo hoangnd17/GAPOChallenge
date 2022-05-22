@@ -16,12 +16,11 @@ class NotificationListViewModelTest: XCTestCase {
     private var sut: NotificationListViewModel!
     private let notifications = BehaviorRelay<[NotificationItemViewModel]>(value: [])
     private let bag = DisposeBag()
+    private let container = DependencyContainer.shared
     
     override func setUp() {
         super.setUp()
-        repository = MockNotificationRepository()
-        useCase = MockNotificationsUseCase(repository: repository)
-        sut = DefaultNotificationListViewModel(with: useCase)
+        sut = DefaultNotificationListViewModel(factory: container)
         sut.outputs.notifications.asObservable().bind(to: notifications).disposed(by: bag)
     }
     

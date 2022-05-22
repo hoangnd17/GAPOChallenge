@@ -16,10 +16,11 @@ protocol NotificationsUseCase {
 
 final class MockNotificationsUseCase: NotificationsUseCase {
     
+    typealias Factory = RepositoryFactory
     private let repository: NotificationRepository
     
-    init(repository: NotificationRepository) {
-        self.repository = repository
+    init(factory: Factory) {
+        self.repository = factory.makeNotificationRepository()
     }
     
     func notifications() -> Observable<NotificationValue> {

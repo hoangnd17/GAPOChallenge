@@ -36,6 +36,7 @@
 		FA54A1722835E86900043D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA54A1702835E86900043D3D /* LaunchScreen.storyboard */; };
 		FAE1D9A628399BC4005957FC /* NotificationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE1D9A528399BC4005957FC /* NotificationListViewController.xib */; };
 		FAE1D9A828399FFF005957FC /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9A728399FFF005957FC /* AppDIContainer.swift */; };
+		FAE1D9AA2839BD4F005957FC /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9A728399FFF005957FC /* AppDIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -523,6 +524,7 @@
 				FA0B49A52837E5A300623018 /* NotificationListViewModel.swift in Sources */,
 				FA0B49922837735E00623018 /* AppCoordinator.swift in Sources */,
 				FA0B49902837735100623018 /* Notification.swift in Sources */,
+				FAE1D9AA2839BD4F005957FC /* AppDIContainer.swift in Sources */,
 				FA0B49AA2837EAF200623018 /* NotificationListViewModelTest.swift in Sources */,
 				FA0B499B28378C0D00623018 /* NotificationsUseCase.swift in Sources */,
 				FA0B49A82837E9F500623018 /* NotificationItemViewModel.swift in Sources */,

@@ -8,7 +8,9 @@
 import Foundation
 
 final class DependencyContainer {
-   
+   static let shared = DependencyContainer()
+    
+    private init() { }
 }
 
 extension DependencyContainer: RepositoryFactory {
@@ -19,15 +21,13 @@ extension DependencyContainer: RepositoryFactory {
 
 extension DependencyContainer: UseCaseFactory {
     func makeNotificationsUseCase() -> NotificationsUseCase {
-        let repository = makeNotificationRepository()
-        return MockNotificationsUseCase(repository: repository)
+        return MockNotificationsUseCase(factory: self)
     }
 }
 
 extension DependencyContainer: ViewModelFactory {
     func makeNotificationListViewModel() -> NotificationListViewModel {
-        let useCase = makeNotificationsUseCase()
-        return DefaultNotificationListViewModel(with: useCase)
+        return DefaultNotificationListViewModel(factory: self)
     }
 }
 

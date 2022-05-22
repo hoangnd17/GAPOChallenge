@@ -11,21 +11,18 @@ import RxCocoa
 
 class NoficationsUseCaseTest: XCTestCase {
     
-    private var repository: NotificationRepository!
     private var notifications: [Notification]!
     private var sut: NotificationsUseCase!
     private var bag: DisposeBag!
     
     override func setUp() {
         super.setUp()
-        repository = MockNotificationRepository()
         notifications = []
-        sut = MockNotificationsUseCase(repository: repository)
+        sut = MockNotificationsUseCase(factory: DependencyContainer.shared)
         bag = DisposeBag()
     }
     
     override func tearDown() {
-        repository = nil
         notifications =  nil
         sut = nil
         bag = nil
