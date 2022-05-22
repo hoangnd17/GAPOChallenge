@@ -182,9 +182,8 @@
 		FA0B49832837045500623018 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA2A3BC7283A2E8500369052 /* ViewController */,
 				FAE1D9B02839D047005957FC /* Cells */,
-				FA54A1692835E86700043D3D /* NotificationListViewController.swift */,
-				FAE1D9A528399BC4005957FC /* NotificationListViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +303,15 @@
 			children = (
 			);
 			path = Storages;
+			sourceTree = "<group>";
+		};
+		FA2A3BC7283A2E8500369052 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA54A1692835E86700043D3D /* NotificationListViewController.swift */,
+				FAE1D9A528399BC4005957FC /* NotificationListViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		FA54A1592835E86700043D3D = {
