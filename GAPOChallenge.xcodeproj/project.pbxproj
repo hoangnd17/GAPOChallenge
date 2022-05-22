@@ -235,8 +235,8 @@
 		FA0B499C28378C1F00623018 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				FA0B4997283773A700623018 /* Repository */,
 				FA0B499D28378C3000623018 /* UseCase */,
+				FA0B4997283773A700623018 /* Repository */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
