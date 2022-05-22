@@ -34,12 +34,12 @@ class NotificationListViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
-        viewModel.viewDidLoad()
+        viewModel.inputs.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.viewWillAppear()
+        viewModel.inputs.viewWillAppear()
     }
 
     private func setupViews() {
@@ -48,8 +48,6 @@ class NotificationListViewController: UIViewController {
     }
 
 }
-
-
 
 extension NotificationListViewController {
     private func setupTableView() {
@@ -60,33 +58,35 @@ extension NotificationListViewController {
             return cell
         }
 
-        viewModel.notifications
+        viewModel.outputs.notifications
             .map { return [NotificationSectionData(items: $0)] }
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: bag)
-           
     }
     
     private func setupSearchController() {
-        searchController.delegate = self
         searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.translatesAutoresizingMaskIntoConstraints = true
         searchController.searchBar.barStyle = .default
-        searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.frame = searchBarContainer.bounds
         searchController.searchBar.autoresizingMask = [.flexibleWidth]
         searchBarContainer.addSubview(searchController.searchBar)
-        definesPresentationContext = true
     }
 }
 
 extension NotificationListViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        viewModel.inputs.didBeginSearch()
+    }
     
-}
-
-extension NotificationListViewController: UISearchControllerDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.inputs.didSearch(query: searchText)
+    }
     
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.inputs.didCancelSearch()
+    }
 }
 
 
