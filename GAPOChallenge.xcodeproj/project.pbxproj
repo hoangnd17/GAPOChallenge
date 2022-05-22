@@ -42,7 +42,6 @@
 		FAE1D9B32839D081005957FC /* NotificationItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9B12839D081005957FC /* NotificationItemCell.swift */; };
 		FAE1D9B42839D081005957FC /* NotificationItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE1D9B22839D081005957FC /* NotificationItemCell.xib */; };
 		FAE1D9B82839D8D7005957FC /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9B72839D8D7005957FC /* UITableView+Extension.swift */; };
-		FAE1D9BA2839D9B3005957FC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9B92839D9B3005957FC /* Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +88,6 @@
 		FAE1D9B12839D081005957FC /* NotificationItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItemCell.swift; sourceTree = "<group>"; };
 		FAE1D9B22839D081005957FC /* NotificationItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationItemCell.xib; sourceTree = "<group>"; };
 		FAE1D9B72839D8D7005957FC /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		FAE1D9B92839D9B3005957FC /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				FAE1D9B72839D8D7005957FC /* UITableView+Extension.swift */,
-				FAE1D9B92839D9B3005957FC /* Reusable.swift */,
 			);
 			path = Extenstion;
 			sourceTree = "<group>";
@@ -557,7 +554,6 @@
 				FA0B49A42837E5A300623018 /* NotificationListViewModel.swift in Sources */,
 				FAE1D9A828399FFF005957FC /* AppDIContainer.swift in Sources */,
 				FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */,
-				FAE1D9BA2839D9B3005957FC /* Reusable.swift in Sources */,
 				FA0B498D28370ADB00623018 /* NotificationRepository.swift in Sources */,
 				FA0B497B2835EC7000623018 /* AppCoordinator.swift in Sources */,
 				FAE1D9B82839D8D7005957FC /* UITableView+Extension.swift in Sources */,

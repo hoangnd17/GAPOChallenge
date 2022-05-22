@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import RxSwift
+import RxDataSources
+import RxCocoa
 
 class NotificationListViewController: UIViewController {
     
@@ -13,6 +16,7 @@ class NotificationListViewController: UIViewController {
     @IBOutlet private weak var searchBarContainer: UIView!
     
     private let searchController = UISearchController(searchResultsController: nil)
+    private let bag = DisposeBag()
     
     typealias Factory = ViewModelFactory
     private let viewModel: NotificationListViewModel!
@@ -30,6 +34,12 @@ class NotificationListViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
+        viewModel.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.viewWillAppear()
     }
 
     private func setupViews() {
@@ -39,9 +49,32 @@ class NotificationListViewController: UIViewController {
 
 }
 
+struct NotificationSectionData {
+    typealias Item = NotificationItemViewModel
+    var items: [NotificationItemViewModel]
+}
+
+extension NotificationSectionData: SectionModelType {
+    init(original: NotificationSectionData, items: [NotificationItemViewModel]) {
+        self = original
+        self.items = items
+    }
+}
+
 extension NotificationListViewController {
     private func setupTableView() {
         tableView.register(nibWithCellClass: NotificationItemCell.self)
+        let dataSource = RxTableViewSectionedReloadDataSource<NotificationSectionData> { dataSource, tableView, indexPath, itemViewModel in
+            let cell = tableView.dequeueReusableCell(withClass: NotificationItemCell.self)
+            cell.bind(itemViewModel)
+            return cell
+        }
+        
+        viewModel.notifications
+            .map { return [NotificationSectionData(items: $0)] }
+            .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: bag)
+           
     }
     
     private func setupSearchController() {
