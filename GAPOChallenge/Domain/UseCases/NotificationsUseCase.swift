@@ -14,7 +14,7 @@ protocol NotificationsUseCase {
     func notificationsByQuery(_ query: NotificationQuery) -> Observable<NotificationValue>
 }
 
-final class MockNotificationsUseCase: NotificationsUseCase {
+final class DefaultNotificationsUseCase: NotificationsUseCase {
     
     typealias Factory = RepositoryFactory
     private let repository: NotificationRepository

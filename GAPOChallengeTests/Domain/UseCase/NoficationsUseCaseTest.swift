@@ -18,7 +18,7 @@ class NoficationsUseCaseTest: XCTestCase {
     override func setUp() {
         super.setUp()
         notifications = []
-        sut = MockNotificationsUseCase(factory: DependencyContainer.shared)
+        sut = DefaultNotificationsUseCase(factory: DependencyContainer.shared)
         bag = DisposeBag()
     }
     

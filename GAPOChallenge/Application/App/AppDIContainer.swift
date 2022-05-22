@@ -21,7 +21,7 @@ extension DependencyContainer: RepositoryFactory {
 
 extension DependencyContainer: UseCaseFactory {
     func makeNotificationsUseCase() -> NotificationsUseCase {
-        return MockNotificationsUseCase(factory: self)
+        return DefaultNotificationsUseCase(factory: self)
     }
 }
 

@@ -39,6 +39,10 @@ class NotificationListViewController: UIViewController {
 }
 
 extension NotificationListViewController {
+    private func setupTableView() {
+        tableView.delegate
+    }
+    
     private func setupSearchController() {
         searchController.delegate = self
         searchController.searchBar.delegate = self
