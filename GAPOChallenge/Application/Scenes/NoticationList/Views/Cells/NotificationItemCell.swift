@@ -21,7 +21,7 @@ class NotificationItemCell: UITableViewCell {
 
     func bind(_ viewModel: NotificationItemViewModel) {
         messageLabel.text = viewModel.text
-        timeStampLabel.text = viewModel.text
+        timeStampLabel.text = viewModel.timestamp
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
