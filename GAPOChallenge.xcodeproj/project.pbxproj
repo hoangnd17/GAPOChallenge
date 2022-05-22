@@ -136,7 +136,7 @@
 		FA0B49792835EB8C00623018 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				FAE1D9A92839A290005957FC /* DIContainer */,
+				FAE1D9A728399FFF005957FC /* AppDIContainer.swift */,
 				FA0B497A2835EC7000623018 /* AppCoordinator.swift */,
 				FA54A1652835E86700043D3D /* AppDelegate.swift */,
 				FA54A1672835E86700043D3D /* SceneDelegate.swift */,
@@ -318,14 +318,6 @@
 				FA0B497C2835EDEA00623018 /* NoticationList */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		FAE1D9A92839A290005957FC /* DIContainer */ = {
-			isa = PBXGroup;
-			children = (
-				FAE1D9A728399FFF005957FC /* AppDIContainer.swift */,
-			);
-			path = DIContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
