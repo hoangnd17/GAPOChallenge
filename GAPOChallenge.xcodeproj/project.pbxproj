@@ -29,6 +29,7 @@
 		FA0B49A72837E9F500623018 /* NotificationItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49A62837E9F500623018 /* NotificationItemViewModel.swift */; };
 		FA0B49A82837E9F500623018 /* NotificationItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49A62837E9F500623018 /* NotificationItemViewModel.swift */; };
 		FA0B49AA2837EAF200623018 /* NotificationListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B49A92837EAF200623018 /* NotificationListViewModelTest.swift */; };
+		FA1F1405283A26BE00350BE7 /* NotificationItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9B12839D081005957FC /* NotificationItemCell.swift */; };
 		FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1652835E86700043D3D /* AppDelegate.swift */; };
 		FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1672835E86700043D3D /* SceneDelegate.swift */; };
 		FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1692835E86700043D3D /* NotificationListViewController.swift */; };
@@ -566,6 +567,7 @@
 			files = (
 				FA0B49932837736100623018 /* AppDelegate.swift in Sources */,
 				FA0B49942837736300623018 /* SceneDelegate.swift in Sources */,
+				FA1F1405283A26BE00350BE7 /* NotificationItemCell.swift in Sources */,
 				FA0B498F2837734400623018 /* NotificationRepository.swift in Sources */,
 				FAE1D9AF2839CD23005957FC /* Mock.swift in Sources */,
 				FA0B49912837735700623018 /* NotificationListViewController.swift in Sources */,
