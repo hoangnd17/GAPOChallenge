@@ -34,13 +34,14 @@ class NotificationListViewController: UIViewController {
 
     private func setupViews() {
         setupSearchController()
+        setupTableView()
     }
 
 }
 
 extension NotificationListViewController {
     private func setupTableView() {
-        tableView.delegate
+        tableView.register(nibWithCellClass: NotificationItemCell.self)
     }
     
     private func setupSearchController() {

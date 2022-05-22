@@ -11,12 +11,12 @@ import UIKit
 final class NotificationItemViewModel {
     
     let text: String
-    let image: String
+    let imagePath: String
     let timestamp: TimeInterval
     
     init(notification: Notification) {
         self.text = notification.message.text
-        self.image = notification.image
+        self.imagePath = notification.image
         self.timestamp = notification.createdAt
     }
     

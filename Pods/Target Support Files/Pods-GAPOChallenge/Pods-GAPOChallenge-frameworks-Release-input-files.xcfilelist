@@ -1,4 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-GAPOChallenge/Pods-GAPOChallenge-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Differentiator-framework/Differentiator.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa-framework/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxDataSources-framework/RxDataSources.framework
 ${BUILT_PRODUCTS_DIR}/RxRelay-framework/RxRelay.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework

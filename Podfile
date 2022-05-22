@@ -4,6 +4,7 @@
 #Rx Libraries
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'RxDataSources'
 
 target 'GAPOChallenge' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -16,8 +17,5 @@ target 'GAPOChallenge' do
     # Pods for testing
   end
 
-  target 'GAPOChallengeUITests' do
-    # Pods for testing
-  end
 
 end

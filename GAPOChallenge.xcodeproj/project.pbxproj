@@ -39,6 +39,10 @@
 		FAE1D9AA2839BD4F005957FC /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9A728399FFF005957FC /* AppDIContainer.swift */; };
 		FAE1D9AE2839CC83005957FC /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9AD2839CC83005957FC /* Mock.swift */; };
 		FAE1D9AF2839CD23005957FC /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9AD2839CC83005957FC /* Mock.swift */; };
+		FAE1D9B32839D081005957FC /* NotificationItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9B12839D081005957FC /* NotificationItemCell.swift */; };
+		FAE1D9B42839D081005957FC /* NotificationItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE1D9B22839D081005957FC /* NotificationItemCell.xib */; };
+		FAE1D9B82839D8D7005957FC /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9B72839D8D7005957FC /* UITableView+Extension.swift */; };
+		FAE1D9BA2839D9B3005957FC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9B92839D9B3005957FC /* Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		FAE1D9A528399BC4005957FC /* NotificationListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationListViewController.xib; sourceTree = "<group>"; };
 		FAE1D9A728399FFF005957FC /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		FAE1D9AD2839CC83005957FC /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		FAE1D9B12839D081005957FC /* NotificationItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItemCell.swift; sourceTree = "<group>"; };
+		FAE1D9B22839D081005957FC /* NotificationItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationItemCell.xib; sourceTree = "<group>"; };
+		FAE1D9B72839D8D7005957FC /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		FAE1D9B92839D9B3005957FC /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +138,7 @@
 		FA0B49782835EB7000623018 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				FAE1D9B52839D8C4005957FC /* Library */,
 				FA0B49792835EB8C00623018 /* App */,
 				FAE1D9A428399AB7005957FC /* Scenes */,
 			);
@@ -170,6 +179,7 @@
 		FA0B49832837045500623018 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FAE1D9B02839D047005957FC /* Cells */,
 				FA54A1692835E86700043D3D /* NotificationListViewController.swift */,
 				FAE1D9A528399BC4005957FC /* NotificationListViewController.xib */,
 			);
@@ -340,6 +350,32 @@
 			path = Storages;
 			sourceTree = "<group>";
 		};
+		FAE1D9B02839D047005957FC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAE1D9B12839D081005957FC /* NotificationItemCell.swift */,
+				FAE1D9B22839D081005957FC /* NotificationItemCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAE1D9B52839D8C4005957FC /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FAE1D9B62839D8CE005957FC /* Extenstion */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		FAE1D9B62839D8CE005957FC /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				FAE1D9B72839D8D7005957FC /* UITableView+Extension.swift */,
+				FAE1D9B92839D9B3005957FC /* Reusable.swift */,
+			);
+			path = Extenstion;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,6 +460,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE1D9B42839D081005957FC /* NotificationItemCell.xib in Resources */,
 				FA54A1722835E86900043D3D /* LaunchScreen.storyboard in Resources */,
 				FAE1D9A628399BC4005957FC /* NotificationListViewController.xib in Resources */,
 				FA54A16F2835E86900043D3D /* Assets.xcassets in Resources */,
@@ -513,14 +550,17 @@
 				FAE1D9AE2839CC83005957FC /* Mock.swift in Sources */,
 				FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */,
 				FA0B498B2837062D00623018 /* Notification.swift in Sources */,
+				FAE1D9B32839D081005957FC /* NotificationItemCell.swift in Sources */,
 				FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */,
 				FA0B499A28378C0900623018 /* NotificationsUseCase.swift in Sources */,
 				FA0B49A72837E9F500623018 /* NotificationItemViewModel.swift in Sources */,
 				FA0B49A42837E5A300623018 /* NotificationListViewModel.swift in Sources */,
 				FAE1D9A828399FFF005957FC /* AppDIContainer.swift in Sources */,
 				FA54A1682835E86700043D3D /* SceneDelegate.swift in Sources */,
+				FAE1D9BA2839D9B3005957FC /* Reusable.swift in Sources */,
 				FA0B498D28370ADB00623018 /* NotificationRepository.swift in Sources */,
 				FA0B497B2835EC7000623018 /* AppCoordinator.swift in Sources */,
+				FAE1D9B82839D8D7005957FC /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
