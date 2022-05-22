@@ -37,6 +37,8 @@
 		FAE1D9A628399BC4005957FC /* NotificationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE1D9A528399BC4005957FC /* NotificationListViewController.xib */; };
 		FAE1D9A828399FFF005957FC /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9A728399FFF005957FC /* AppDIContainer.swift */; };
 		FAE1D9AA2839BD4F005957FC /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9A728399FFF005957FC /* AppDIContainer.swift */; };
+		FAE1D9AE2839CC83005957FC /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9AD2839CC83005957FC /* Mock.swift */; };
+		FAE1D9AF2839CD23005957FC /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9AD2839CC83005957FC /* Mock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,7 @@
 		FA54A1782835E86A00043D3D /* GAPOChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAPOChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE1D9A528399BC4005957FC /* NotificationListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationListViewController.xib; sourceTree = "<group>"; };
 		FAE1D9A728399FFF005957FC /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		FAE1D9AD2839CC83005957FC /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +199,8 @@
 		FA0B4986283704B100623018 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FAE1D9AC2839CC70005957FC /* Storages */,
+				FAE1D9AB2839CC69005957FC /* Network */,
 				FA0B49A0283794EB00623018 /* Mock */,
 			);
 			path = Data;
@@ -252,6 +257,7 @@
 		FA0B49A0283794EB00623018 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				FAE1D9AD2839CC83005957FC /* Mock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -318,6 +324,20 @@
 				FA0B497C2835EDEA00623018 /* NoticationList */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FAE1D9AB2839CC69005957FC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FAE1D9AC2839CC70005957FC /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE1D9AE2839CC83005957FC /* Mock.swift in Sources */,
 				FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */,
 				FA0B498B2837062D00623018 /* Notification.swift in Sources */,
 				FA54A1662835E86700043D3D /* AppDelegate.swift in Sources */,
@@ -510,6 +531,7 @@
 				FA0B49932837736100623018 /* AppDelegate.swift in Sources */,
 				FA0B49942837736300623018 /* SceneDelegate.swift in Sources */,
 				FA0B498F2837734400623018 /* NotificationRepository.swift in Sources */,
+				FAE1D9AF2839CD23005957FC /* Mock.swift in Sources */,
 				FA0B49912837735700623018 /* NotificationListViewController.swift in Sources */,
 				FA0B499F28378C5F00623018 /* NoficationsUseCaseTest.swift in Sources */,
 				FA0B49962837739B00623018 /* NotificationRepositoryTest.swift in Sources */,
