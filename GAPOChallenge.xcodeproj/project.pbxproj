@@ -35,6 +35,7 @@
 		FA54A16A2835E86700043D3D /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1692835E86700043D3D /* NotificationListViewController.swift */; };
 		FA54A16F2835E86900043D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA54A16E2835E86900043D3D /* Assets.xcassets */; };
 		FA54A1722835E86900043D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA54A1702835E86900043D3D /* LaunchScreen.storyboard */; };
+		FA9946DD283A282600747BDE /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9B72839D8D7005957FC /* UITableView+Extension.swift */; };
 		FAE1D9A628399BC4005957FC /* NotificationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE1D9A528399BC4005957FC /* NotificationListViewController.xib */; };
 		FAE1D9A828399FFF005957FC /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9A728399FFF005957FC /* AppDIContainer.swift */; };
 		FAE1D9AA2839BD4F005957FC /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1D9A728399FFF005957FC /* AppDIContainer.swift */; };
@@ -580,6 +581,7 @@
 				FA0B49AA2837EAF200623018 /* NotificationListViewModelTest.swift in Sources */,
 				FA0B499B28378C0D00623018 /* NotificationsUseCase.swift in Sources */,
 				FA0B49A82837E9F500623018 /* NotificationItemViewModel.swift in Sources */,
+				FA9946DD283A282600747BDE /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

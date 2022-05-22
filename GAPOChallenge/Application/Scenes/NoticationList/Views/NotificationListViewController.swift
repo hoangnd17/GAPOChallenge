@@ -69,7 +69,7 @@ extension NotificationListViewController {
             cell.bind(itemViewModel)
             return cell
         }
-        
+
         viewModel.notifications
             .map { return [NotificationSectionData(items: $0)] }
             .drive(tableView.rx.items(dataSource: dataSource))
